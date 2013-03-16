@@ -13,9 +13,7 @@ set backspace=2
 
 " window management
 map g. <C-W>_<C-W>\|
-map gh <C-W>h<C-W>\|
 map gj <C-W>j<C-W>_
-map gl <C-W>l<C-W>\|
 map gk <C-W>k<C-W>_
 set splitright
 set splitbelow
