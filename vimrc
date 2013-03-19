@@ -34,6 +34,7 @@ nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gl :Glog<CR>
 nmap <Leader>ge :Gedit<CR>
+nmap <Leader>gb :Gblame<CR>
 
 " Start Pathogen
 call pathogen#infect()
