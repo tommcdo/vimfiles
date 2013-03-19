@@ -24,10 +24,11 @@ au BufNewFile,BufRead *.tpl set ft=php
 " ctags stuff
 set tags=./tags;
 
-" NERDTree maps
+" NERDTree maps and settings
 nmap <F7> :NERDTreeToggle<CR>
 nmap <Leader>nm :NERDTreeMirror<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
+let NERDTreeDirArrows=0
 
 " fugitive maps
 nmap <Leader>gs :Gstatus<CR>
