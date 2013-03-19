@@ -22,9 +22,9 @@
 [submodule "bundle/vim-text-objects"]
 	path = bundle/vim-text-objects
 	url = git://github.com/tommcdo/vim-text-objects
-[submodule "bundle/vim-align-operator"]
-	path = bundle/vim-align-operator
-	url = git://github.com/tommcdo/vim-align-operator
-[submodule "bundle/vim-center-motion"]
-	path = bundle/vim-center-motion
-	url = git://github.com/tommcdo/vim-center-motion
+[submodule "bundle/vim-lion"]
+	path = bundle/vim-lion
+	url = git://github.com/tommcdo/vim-lion
+[submodule "bundle/vim-centaur"]
+	path = bundle/vim-centaur
+	url = git://github.com/tommcdo/vim-centaur
