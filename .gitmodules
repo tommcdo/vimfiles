@@ -25,3 +25,6 @@
 [submodule "bundle/vim-align-operator"]
 	path = bundle/vim-align-operator
 	url = git://github.com/tommcdo/vim-align-operator
+[submodule "bundle/vim-center-motion"]
+	path = bundle/vim-center-motion
+	url = git://github.com/tommcdo/vim-center-motion
