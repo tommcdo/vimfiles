@@ -7,8 +7,6 @@ set background=dark
 set autoindent
 set nohlsearch
 set textwidth=0
-set formatoptions=tcq
-set formatoptions-=l
 set backspace=2
 
 " window management
@@ -17,9 +15,6 @@ map gj <C-W>j<C-W>_
 map gk <C-W>k<C-W>_
 set splitright
 set splitbelow
-set switchbuf=usetab
-
-au BufNewFile,BufRead *.tpl set ft=php
 
 " ctags stuff
 set tags=./tags;
