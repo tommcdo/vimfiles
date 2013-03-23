@@ -25,12 +25,13 @@ nmap <Leader>nm :NERDTreeMirror<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
 let NERDTreeDirArrows=0
 
-" fugitive maps
+" fugitive maps and settings
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gl :Glog<CR>
 nmap <Leader>ge :Gedit<CR>
 nmap <Leader>gb :Gblame<CR>
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Start Pathogen
 call pathogen#infect()
