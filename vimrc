@@ -11,7 +11,7 @@ set textwidth=0                " Disable all automatic text formatting
 set backspace=indent,eol,start " Allow backspace to work over indentation, end of line, and start of insert
 set splitright                 " Open vertical splits to the right of current window
 set splitbelow                 " Open horizontal splits below current window
-set tags=./tags;               " Look for ctags file starting in this directory, and traversing upwards to parents
+set tags=./tags;               " Look for tags file starting in this directory, and traversing upwards to parents
 
 """ Mappings for window management
 map g. <C-W>_<C-W><Bar>
