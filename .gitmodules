@@ -28,3 +28,6 @@
 [submodule "bundle/vim-centaur"]
 	path = bundle/vim-centaur
 	url = git://github.com/tommcdo/vim-centaur
+[submodule "bundle/vim-kangaroo"]
+	path = bundle/vim-kangaroo
+	url = git://github.com/tommcdo/vim-kangaroo
