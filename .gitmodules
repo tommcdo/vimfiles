@@ -31,3 +31,6 @@
 [submodule "bundle/vim-kangaroo"]
 	path = bundle/vim-kangaroo
 	url = git://github.com/tommcdo/vim-kangaroo
+[submodule "bundle/puppet-syntax-vim"]
+	path = bundle/puppet-syntax-vim
+	url = https://github.com/puppetlabs/puppet-syntax-vim.git
