@@ -16,6 +16,7 @@ set splitbelow                 " Open horizontal splits below current window
 set tags=./tags;               " Look for tags file starting in this directory, and traversing upwards to parents
 set showtabline=2              " Show tab line even when only one tab is open
 set modeline                   " Enable modeline configuration
+set noequalalways              " Prevent Vim from equal-sizing windows after closing splits
 
 """ Mappings for window management
 map g. <C-W>_<C-W><Bar>
