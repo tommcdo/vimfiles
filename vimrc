@@ -17,6 +17,8 @@ set tags=./tags;               " Look for tags file starting in this directory, 
 set showtabline=2              " Show tab line even when only one tab is open
 set modeline                   " Enable modeline configuration
 set noequalalways              " Prevent Vim from equal-sizing windows after closing splits
+set copyindent                 " Copy indentation whitespace from previous line
+set preserveindent             " Try to preserve indentation when shifting
 
 """ Mappings for window management
 map g. <C-W>_<C-W><Bar>
