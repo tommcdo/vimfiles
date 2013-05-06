@@ -1,7 +1,7 @@
 """ General preferences
 syntax on                      " Enable syntax highlighting
-colorscheme slate              " Use the slate color scheme
-set t_Co=256                   " Enable 256 terminal colors
+colorscheme default            " Use the default color scheme
+set term=xterm-256color        " Enable 256 terminal colors
 set background=dark            " Use colorscheme for dark backgrounds
 set tabstop=4                  " Use a width of 4 for tabs
 set shiftwidth=4               " Use a width of 4 when indenting
