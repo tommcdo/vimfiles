@@ -37,6 +37,6 @@
 [submodule "bundle/vim-javascript-syntax"]
 	path = bundle/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax
-[submodule "bundle/undotree"]
-	path = bundle/undotree
-	url = https://github.com/mbbill/undotree.git
+[submodule "bundle/gundo.vim"]
+	path = bundle/gundo.vim
+	url = https://github.com/sjl/gundo.vim

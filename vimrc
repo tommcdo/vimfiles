@@ -38,7 +38,7 @@ nmap <Leader>ge :Gedit<CR>
 nmap <Leader>gb :Gblame<CR>
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Enable Fugitive statusline (adds branch name)
 
-""" Gundo maps and settings
+""" Undotree maps and settings
 nmap <F5> :GundoToggle<CR>
 let g:gundo_right=1
 
