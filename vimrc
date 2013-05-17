@@ -42,5 +42,12 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Enabl
 nmap <F5> :GundoToggle<CR>
 let g:gundo_right=1
 
+""" Solarized color scheme settings
+if 1
+	let g:solarized_contrast='high'
+	let g:solarized_visibility='low'
+	colorscheme solarized
+endif
+
 """ Pathogen
 call pathogen#infect() " Start Pathogen
