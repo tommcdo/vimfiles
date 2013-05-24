@@ -28,7 +28,7 @@ map gk <C-W>k<C-W>_
 """ NERDTree maps and settings
 nmap <F7> :NERDTreeToggle<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
-let NERDTreeDirArrows=0 " Use plain old ASCII instead of fancy arrows
+let NERDTreeDirArrows = 0 " Use plain old ASCII instead of fancy arrows
 
 """ Fugitive maps and settings
 nmap <Leader>gs :Gstatus<CR>
@@ -40,11 +40,14 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Enabl
 
 """ Gundo maps and settings
 nmap <F5> :GundoToggle<CR>
-let g:gundo_right=1
+let g:gundo_right = 1
+
+""" GitGutter maps and settings
+let g:gitgutter_eager = 0
 
 """ Pathogen
 call pathogen#infect() " Start Pathogen
 
 """ Solarized color scheme settings
-let g:solarized_contrast='high'
+let g:solarized_contrast = 'high'
 colorscheme solarized
