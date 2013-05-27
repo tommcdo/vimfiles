@@ -51,3 +51,7 @@ call pathogen#infect() " Start Pathogen
 """ Solarized color scheme settings
 let g:solarized_contrast = 'high'
 colorscheme solarized
+
+""" Additional tweaks
+" Refresh GitGutter when committing with Fugitive
+autocmd User Fugitive execute 'autocmd BufWrite ' . fugitive#extract_git_dir('.') . '/COMMIT_EDITMSG :GitGutterAll'
