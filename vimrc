@@ -43,7 +43,7 @@ nmap <F5> :GundoToggle<CR>
 let g:gundo_right = 1
 
 """ GitGutter maps and settings
-let g:gitgutter_eager = 0
+"let g:gitgutter_eager = 0
 
 """ Pathogen
 call pathogen#infect() " Start Pathogen
@@ -54,4 +54,4 @@ colorscheme solarized
 
 """ Additional tweaks
 " Refresh GitGutter when committing with Fugitive
-autocmd User Fugitive execute 'autocmd BufWrite ' . fugitive#extract_git_dir('.') . '/COMMIT_EDITMSG :GitGutterAll'
+"autocmd User Fugitive execute 'autocmd BufWrite ' . fugitive#extract_git_dir('.') . '/COMMIT_EDITMSG :GitGutterAll'
