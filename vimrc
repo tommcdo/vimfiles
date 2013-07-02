@@ -42,6 +42,9 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Enabl
 nmap <F5> :GundoToggle<CR>
 let g:gundo_right = 1
 
+""" Gist maps and settings
+let g:gist_clip_command = 'xclip'
+
 """ GitGutter maps and settings
 "let g:gitgutter_eager = 0
 
