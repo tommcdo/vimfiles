@@ -25,6 +25,9 @@ map g. <C-W>_<C-W><Bar>
 map gj <C-W>j<C-W>_
 map gk <C-W>k<C-W>_
 
+""" Custom commands that don't yet warrant a plugin
+command! -range=% Haste <line1>,<line2>w !haste | xclip
+
 """ NERDTree maps and settings
 nmap <F7> :NERDTreeToggle<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
