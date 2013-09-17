@@ -60,8 +60,9 @@ colorscheme solarized
 hi clear SpecialKey
 hi SpecialKey term=bold cterm=bold ctermfg=12 guifg=Cyan
 
-""" Matchmaker settings
+""" Matchmaker maps and settings
 hi Matchmaker ctermbg=2 ctermfg=7
+nmap <F8> :MatchmakerToggle<CR>
 
 """ Additional tweaks
 " Refresh GitGutter when committing with Fugitive
