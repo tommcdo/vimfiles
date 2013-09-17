@@ -52,3 +52,6 @@
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim.git
+[submodule "bundle/vim-matchmaker"]
+	path = bundle/vim-matchmaker
+	url = https://github.com/qstrahl/vim-matchmaker.git

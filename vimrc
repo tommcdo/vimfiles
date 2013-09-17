@@ -57,6 +57,11 @@ call pathogen#infect() " Start Pathogen
 """ Solarized color scheme settings
 let g:solarized_contrast = 'high'
 colorscheme solarized
+hi clear SpecialKey
+hi SpecialKey term=bold cterm=bold ctermfg=12 guifg=Cyan
+
+""" Matchmaker settings
+hi Matchmaker ctermbg=2 ctermfg=7
 
 """ Additional tweaks
 " Refresh GitGutter when committing with Fugitive
