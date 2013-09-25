@@ -57,11 +57,11 @@ call pathogen#infect() " Start Pathogen
 """ Solarized color scheme settings
 let g:solarized_contrast = 'high'
 colorscheme solarized
-hi clear SpecialKey
-hi SpecialKey term=bold cterm=bold ctermfg=12 guifg=Cyan
+highlight clear SpecialKey
+highlight SpecialKey ctermfg=4
 
 """ Matchmaker maps and settings
-hi Matchmaker ctermbg=2 ctermfg=7
+highlight Matchmaker ctermbg=2 ctermfg=7
 nmap <F8> :MatchmakerToggle<CR>
 
 """ Additional tweaks
