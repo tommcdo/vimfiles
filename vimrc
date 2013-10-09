@@ -33,6 +33,9 @@ nmap <F7> :NERDTreeToggle<CR>
 nmap <Leader>nf :NERDTreeFind<CR>
 let NERDTreeDirArrows = 0 " Use plain old ASCII instead of fancy arrows
 
+""" Syntastic maps and settings
+nmap <F6> :SyntasticToggleMode<CR>
+
 """ Fugitive maps and settings
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
