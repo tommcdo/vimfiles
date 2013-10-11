@@ -51,9 +51,6 @@ let g:gundo_right = 1
 """ Gist maps and settings
 let g:gist_clip_command = 'xclip'
 
-""" GitGutter maps and settings
-"let g:gitgutter_eager = 0
-
 """ Pathogen
 call pathogen#infect() " Start Pathogen
 
@@ -66,7 +63,3 @@ highlight SpecialKey ctermfg=4
 """ Matchmaker maps and settings
 highlight Matchmaker ctermbg=2 ctermfg=7
 nmap <F8> :MatchmakerToggle<CR>
-
-""" Additional tweaks
-" Refresh GitGutter when committing with Fugitive
-"autocmd User Fugitive execute 'autocmd BufWrite ' . fugitive#extract_git_dir('.') . '/COMMIT_EDITMSG :GitGutterAll'
