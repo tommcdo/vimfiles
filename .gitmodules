@@ -55,3 +55,9 @@
 [submodule "bundle/vim-matchmaker"]
 	path = bundle/vim-matchmaker
 	url = https://github.com/qstrahl/vim-matchmaker.git
+[submodule "bundle/seoul256.vim"]
+	path = bundle/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim
+[submodule "bundle/jellybeans.vim"]
+	path = bundle/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim
