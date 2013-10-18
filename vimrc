@@ -1,6 +1,5 @@
 """ General preferences
 syntax on                      " Enable syntax highlighting
-colorscheme default            " Use the default color scheme
 set term=xterm-256color        " Enable 256 terminal colors
 set background=dark            " Use colorscheme for dark backgrounds
 set tabstop=4                  " Use a width of 4 for tabs
@@ -51,15 +50,12 @@ let g:gundo_right = 1
 """ Gist maps and settings
 let g:gist_clip_command = 'xclip'
 
+""" Matchmaker maps and settings
+nmap <F8> :MatchmakerToggle<CR>
+
 """ Pathogen
 call pathogen#infect() " Start Pathogen
 
-""" Solarized color scheme settings
-let g:solarized_contrast = 'high'
-colorscheme solarized
-highlight clear SpecialKey
-highlight SpecialKey ctermfg=4
-
-""" Matchmaker maps and settings
-highlight Matchmaker ctermbg=2 ctermfg=7
-nmap <F8> :MatchmakerToggle<CR>
+""" Colorscheme settings
+let g:seoul256_background = 233
+colorscheme seoul256
