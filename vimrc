@@ -18,6 +18,7 @@ set modeline                   " Enable modeline configuration
 set noequalalways              " Prevent Vim from equal-sizing windows after closing splits
 set copyindent                 " Copy indentation whitespace from previous line
 set preserveindent             " Try to preserve indentation when shifting
+set laststatus=2               " Show statusline even when there is only one window
 
 """ Mappings for window management
 map g. <C-W>_<C-W><Bar>
@@ -52,6 +53,11 @@ let g:gist_clip_command = 'xclip'
 
 """ Matchmaker maps and settings
 nmap <F8> :MatchmakerToggle<CR>
+
+""" Airline maps and settings
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'bubblegum'
+let g:airline#extensions#tabline#enabled = 1
 
 """ Pathogen
 call pathogen#infect() " Start Pathogen
