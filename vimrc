@@ -20,6 +20,33 @@ set copyindent                 " Copy indentation whitespace from previous line
 set preserveindent             " Try to preserve indentation when shifting
 set laststatus=2               " Show statusline even when there is only one window
 
+""" Include bundles with Vundle
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tommcdo/vim-text-objects'
+Bundle 'tommcdo/vim-lion'
+Bundle 'tommcdo/vim-centaur'
+Bundle 'tommcdo/vim-kangaroo'
+Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'sjl/gundo.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'lepture/vim-jinja'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'qstrahl/vim-matchmaker'
+Bundle 'junegunn/seoul256.vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'bling/vim-airline'
+
 """ Mappings for window management
 map g. <C-W>_<C-W><Bar>
 map gj <C-W>j<C-W>_
