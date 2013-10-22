@@ -87,9 +87,6 @@ let g:airline_theme = 'bubblegum'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
-""" Pathogen
-call pathogen#infect() " Start Pathogen
-
 """ Colorscheme settings
 function! ColorScheme(cs)
 	if a:cs == 'solarized'
