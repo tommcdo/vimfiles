@@ -46,6 +46,7 @@ Bundle 'qstrahl/vim-matchmaker'
 Bundle 'junegunn/seoul256.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
+Bundle 'tommcdo/vim-fugitive-blame-ext'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
