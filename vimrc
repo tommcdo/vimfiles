@@ -93,8 +93,8 @@ function! ColorScheme(cs)
 		set background=dark
 		let g:solarized_termcolors = 256
 		colorscheme solarized
-		hi clear SpecialKey
-		hi link SpecialKey Identifier
+		highlight clear SpecialKey
+		highlight link SpecialKey Identifier
 	elseif a:cs == 'seoul256'
 		let g:seoul256_background = 233
 		colorscheme seoul256
