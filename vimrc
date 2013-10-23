@@ -48,38 +48,38 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
 
 """ Mappings for window management
-map g. <C-W>_<C-W><Bar>
-map gj <C-W>j<C-W>_
-map gk <C-W>k<C-W>_
+nnoremap g. <C-W>_<C-W><Bar>
+nnoremap gj <C-W>j<C-W>_
+nnoremap gk <C-W>k<C-W>_
 
 """ Custom commands that don't yet warrant a plugin
 command! -range=% Haste <line1>,<line2>w !haste | xclip
 
 """ NERDTree maps and settings
-nmap <F7> :NERDTreeToggle<CR>
-nmap <Leader>nf :NERDTreeFind<CR>
+nnoremap <F7> :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
 let NERDTreeDirArrows = 0 " Use plain old ASCII instead of fancy arrows
 
 """ Syntastic maps and settings
-nmap <F6> :SyntasticToggleMode<CR>
+nnoremap <F6> :SyntasticToggleMode<CR>
 
 """ Fugitive maps and settings
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>gl :Glog<CR>
-nmap <Leader>ge :Gedit<CR>
-nmap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gl :Glog<CR>
+nnoremap <Leader>ge :Gedit<CR>
+nnoremap <Leader>gb :Gblame<CR>
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Enable Fugitive statusline (adds branch name)
 
 """ Gundo maps and settings
-nmap <F5> :GundoToggle<CR>
+nnoremap <F5> :GundoToggle<CR>
 let g:gundo_right = 1
 
 """ Gist maps and settings
 let g:gist_clip_command = 'xclip'
 
 """ Matchmaker maps and settings
-nmap <F8> :MatchmakerToggle<CR>
+nnoremap <F8> :MatchmakerToggle<CR>
 
 """ Airline maps and settings
 let g:airline_powerline_fonts = 1
