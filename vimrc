@@ -90,6 +90,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
 """ SkyBison maps and settings
+let g:skybison_fuzz = 1
 nnoremap <Leader>s :<C-U>call SkyBison("")<CR>
 
 """ Colorscheme settings
