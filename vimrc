@@ -47,6 +47,7 @@ Bundle 'junegunn/seoul256.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
+Bundle 'paradigm/SkyBison'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
@@ -87,6 +88,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
+
+""" SkyBison maps and settings
+nnoremap <Leader>s :<C-U>SkyBison("")<CR>
 
 """ Colorscheme settings
 function! ColorScheme(cs)
