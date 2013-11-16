@@ -48,6 +48,7 @@ Bundle 'junegunn/seoul256.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
 Bundle 'rking/ag.vim'
+Bundle 'kien/ctrlp.vim'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
@@ -56,6 +57,9 @@ nnoremap gk <C-W>k<C-W>_
 
 """ Custom commands that don't yet warrant a plugin
 command! -range=% Haste <line1>,<line2>w !haste | xclip
+
+""" CtrlP maps and settings
+let g:ctrlp_map = '<C-P>'
 
 """ NERDTree maps and settings
 nnoremap <F7> :NERDTreeToggle<CR>
