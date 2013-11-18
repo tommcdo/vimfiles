@@ -51,6 +51,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
 Bundle 'rking/ag.vim'
 Bundle 'aaronjensen/ctrlp.vim'
+Bundle 'mhinz/vim-signify'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
@@ -80,6 +81,10 @@ nnoremap <Leader>ge :Gedit<CR>
 nnoremap <Leader>gb :Gblame -w<CR>
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Enable Fugitive statusline (adds branch name)
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+""" Signify maps and settings
+let g:signify_mapping_next_hunk = ']h'
+let g:signify_mapping_prev_hunk = '[h'
 
 """ Gundo maps and settings
 nnoremap <F5> :GundoToggle<CR>
