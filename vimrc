@@ -49,7 +49,7 @@ Bundle 'junegunn/seoul256.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
 Bundle 'rking/ag.vim'
-Bundle 'kien/ctrlp.vim'
+Bundle 'aaronjensen/ctrlp.vim'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
