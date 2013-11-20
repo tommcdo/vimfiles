@@ -21,6 +21,7 @@ set copyindent                 " Copy indentation whitespace from previous line
 set preserveindent             " Try to preserve indentation when shifting
 set laststatus=2               " Show statusline even when there is only one window
 set winwidth=9                 " Allow current window to be as small as 9 columns wide
+set incsearch                  " Show search patterns as they are typed
 
 """ Include bundles with Vundle
 set runtimepath+=~/.vim/bundle/vundle/
