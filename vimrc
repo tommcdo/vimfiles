@@ -53,6 +53,7 @@ Bundle 'tommcdo/vim-fugitive-blame-ext'
 Bundle 'rking/ag.vim'
 Bundle 'aaronjensen/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'tommcdo/vim-exchange'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
