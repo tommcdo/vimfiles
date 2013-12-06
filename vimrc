@@ -6,7 +6,7 @@ set tabstop=4                  " Use a width of 4 for tabs
 set softtabstop=4              " Use a width of 4 when inserting tabs
 set shiftwidth=4               " Use a width of 4 when indenting
 set list                       " Place cursor at start of space a tab character occupies
-set listchars=tab:\ \          " Display tabs with a space followed by more spaces
+set listchars=tab:\ \ ,trail:· " Display tabs with a space followed by more spaces
 set autoindent                 " Automatically preserve indentation level
 set nohlsearch                 " Do not highlight matched search terms
 set textwidth=0                " Disable all automatic text formatting
