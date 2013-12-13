@@ -57,6 +57,7 @@ Bundle 'tommcdo/vim-exchange'
 Bundle 'PeterRincker/vim-argumentative'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-dispatch'
+Bundle 'joonty/vdebug'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
@@ -96,6 +97,21 @@ let g:gist_clip_command = 'xclip'
 
 """ Matchmaker maps and settings
 nnoremap <F8> :MatchmakerToggle<CR>
+
+""" Vdebug maps and settings
+let g:vdebug_keymap = {
+\	"run" : "<Leader>vs",
+\	"run_to_cursor" : "<Leader>vr",
+\	"step_over" : "<Leader>vo",
+\	"step_into" : "<Leader>vi",
+\	"step_out" : "<Leader>vu",
+\	"close" : "<Leader>vx",
+\	"detach" : "<Leader>vd",
+\	"set_breakpoint" : "<Leader>vb",
+\	"get_context" : "<Leader>vc",
+\	"eval_under_cursor" : "<Leader>ve",
+\	"eval_visual" : "<Leader>vE",
+\}
 
 """ Colorscheme settings
 function! ColorScheme(cs)
