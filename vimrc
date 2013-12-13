@@ -55,6 +55,7 @@ Bundle 'aaronjensen/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'PeterRincker/vim-argumentative'
+Bundle 'chrisbra/NrrwRgn'
 
 """ Mappings for window management
 nnoremap g. <C-W>_<C-W><Bar>
