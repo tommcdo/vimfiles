@@ -30,6 +30,7 @@ Bundle 'gmarik/vundle'
 
 " Navigation plugins
 Bundle 'aaronjensen/ctrlp.vim'
+Bundle 'deris/columnjump'
 Bundle 'qstrahl/vim-matchmaker'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tommcdo/vim-centaur'
