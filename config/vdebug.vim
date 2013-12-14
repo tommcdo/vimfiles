@@ -30,12 +30,12 @@ nmap <Leader>vR <Plug>VdebugRunToCursor
 nmap <Leader>vo <Plug>VdebugStepOver
 nmap <Leader>vi <Plug>VdebugStepInto
 nmap <Leader>vu <Plug>VdebugStepOut
-nmap <Leader>vC <Plug>VdebugClose
+nmap <Leader>vx <Plug>VdebugClose
 nmap <Leader>vd <Plug>VdebugDetach
-nmap <Leader>vp <Plug>VdebugSetBreakpoint
+nmap <Leader>vs <Plug>VdebugSetBreakpoint
 nmap <Leader>vc <Plug>VdebugGetContext
-nmap <Leader>vs <Plug>VdebugEvalUnderCursor
-vmap <Leader>vs <Plug>VdebugEvalVisual
+nmap <Leader>v= <Plug>VdebugEvalUnderCursor
+vmap <Leader>v= <Plug>VdebugEvalVisual
 
 function! s:toggle_vdebug()
     if !exists('s:vdebug_mode')
@@ -45,12 +45,12 @@ function! s:toggle_vdebug()
         nmap o <Plug>VdebugStepOver
         nmap i <Plug>VdebugStepInto
         nmap u <Plug>VdebugStepOut
-        nmap C <Plug>VdebugClose
+        nmap x <Plug>VdebugClose
         nmap d <Plug>VdebugDetach
-        nmap p <Plug>VdebugSetBreakpoint
+        nmap s <Plug>VdebugSetBreakpoint
         nmap c <Plug>VdebugGetContext
-        nmap s <Plug>VdebugEvalUnderCursor
-        vmap s <Plug>VdebugEvalVisual
+        nmap = <Plug>VdebugEvalUnderCursor
+        vmap = <Plug>VdebugEvalVisual
         echo "Vdebug mode on"
     else
         unlet s:vdebug_mode
@@ -59,12 +59,12 @@ function! s:toggle_vdebug()
         nunmap o
         nunmap i
         nunmap u
-        nunmap C
+        nunmap x
         nunmap d
-        nunmap p
-        nunmap c
         nunmap s
-        vunmap s
+        nunmap c
+        nunmap =
+        vunmap =
         echo "Vdebug mode off"
     endif
 endfunction
