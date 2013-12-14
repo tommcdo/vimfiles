@@ -29,6 +29,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Navigation plugins
+Bundle 'aaronjensen/ctrlp.vim'
 Bundle 'qstrahl/vim-matchmaker'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tommcdo/vim-centaur'
@@ -47,7 +48,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
 " Tooling plugins
-Bundle 'aaronjensen/ctrlp.vim'
 Bundle 'joonty/vdebug'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
