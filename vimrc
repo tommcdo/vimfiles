@@ -27,147 +27,47 @@ set incsearch                  " Show search patterns as they are typed
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+
+" Navigation plugins
+Bundle 'qstrahl/vim-matchmaker'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-abolish'
-Bundle 'tommcdo/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tommcdo/vim-text-objects'
-Bundle 'tommcdo/vim-lion'
 Bundle 'tommcdo/vim-centaur'
 Bundle 'tommcdo/vim-kangaroo'
-Bundle 'tommcdo/vim-arsey'
-Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'sjl/gundo.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'lepture/vim-jinja'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'qstrahl/vim-matchmaker'
-Bundle 'junegunn/seoul256.vim'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tommcdo/vim-fugitive-blame-ext'
-Bundle 'rking/ag.vim'
-Bundle 'aaronjensen/ctrlp.vim'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'tommcdo/vim-exchange'
+Bundle 'tpope/vim-unimpaired'
+
+" Editing plugins
 Bundle 'PeterRincker/vim-argumentative'
 Bundle 'chrisbra/NrrwRgn'
-Bundle 'tpope/vim-dispatch'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'tommcdo/vim-exchange'
+Bundle 'tommcdo/vim-lion'
+Bundle 'tommcdo/vim-text-objects'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+
+" Tooling plugins
+Bundle 'aaronjensen/ctrlp.vim'
 Bundle 'joonty/vdebug'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'rking/ag.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo.vim'
+Bundle 'tommcdo/vim-fugitive'
+Bundle 'tommcdo/vim-fugitive-blame-ext'
+Bundle 'tpope/vim-dispatch'
 
-""" Mappings for window management
-nnoremap g. <C-W>_<C-W><Bar>
-nnoremap gj <C-W>j<C-W>_
-nnoremap gk <C-W>k<C-W>_
+" Syntax and colorscheme plugins
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'junegunn/seoul256.vim'
+Bundle 'lepture/vim-jinja'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'puppetlabs/puppet-syntax-vim'
 
-""" Custom commands that don't yet warrant a plugin
-command! -range=% Haste <line1>,<line2>w !haste | xclip
+" Miscellaneous plugins
+Bundle 'tommcdo/vim-arsey'
 
-""" CtrlP maps and settings
-let g:ctrlp_map = '<C-P>'
-
-""" NERDTree maps and settings
-nnoremap <F7> :NERDTreeToggle<CR>
-nnoremap <Leader>nf :NERDTreeFind<CR>
-let NERDTreeDirArrows = 0 " Use plain old ASCII instead of fancy arrows
-
-""" Syntastic maps and settings
-nnoremap <F6> :SyntasticToggleMode<CR>
-let g:syntastic_always_populate_loc_list = 1 " Always populate location list on errors
-
-""" Fugitive maps and settings
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gl :Glog<CR>
-nnoremap <Leader>ge :Gedit<CR>
-nnoremap <Leader>gb :Gblame -w<CR>
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Enable Fugitive statusline (adds branch name)
-autocmd BufReadPost fugitive://* set bufhidden=delete
-
-""" Gundo maps and settings
-nnoremap <F5> :GundoToggle<CR>
-let g:gundo_right = 1
-
-""" Gist maps and settings
-let g:gist_clip_command = 'xclip'
-
-""" Matchmaker maps and settings
-nnoremap <F8> :MatchmakerToggle<CR>
-
-""" Vdebug maps and settings
-let g:vdebug_keymap = {
-\	"run" : "<Leader>vs",
-\	"run_to_cursor" : "<Leader>vr",
-\	"step_over" : "<Plug>VdebugStepOver",
-\	"step_into" : "<Plug>VdebugStepInto",
-\	"step_out" : "<Plug>VdebugStepOut",
-\	"close" : "<Leader>vx",
-\	"detach" : "<Leader>vd",
-\	"set_breakpoint" : "<Leader>vb",
-\	"get_context" : "<Plug>VdebugGetContext",
-\	"eval_under_cursor" : "<Plug>VdebugEval",
-\	"eval_visual" : "<Plug>VdebugEvalVisual",
-\}
-nmap <Leader>vo <Plug>VdebugStepOver
-nmap <Leader>vi <Plug>VdebugStepInto
-nmap <Leader>vu <Plug>VdebugStepOut
-nmap <Leader>vc <Plug>VdebugGetContext
-nmap <Leader>ve <Plug>VdebugEval
-vmap <Leader>ve <Plug>VdebugEvalVisual
-function! s:toggle_vdebug()
-    if exists('s:vdebug_mode')
-        nunmap o
-        nunmap i
-        nunmap u
-        nunmap c
-        nunmap s
-        vunmap s
-        unlet s:vdebug_mode
-        echo "Vdebug Mode off"
-    else
-        let s:vdebug_mode = 1
-        nmap o <Plug>VdebugStepOver
-        nmap i <Plug>VdebugStepInto
-        nmap u <Plug>VdebugStepOut
-        nmap c <Plug>VdebugGetContext
-        nmap s <Plug>VdebugEval
-        vmap s <Plug>VdebugEvalVisual
-        echo "Vdebug Mode on"
-    endif
-endfunction
-nnoremap <F4> :<C-U>call <SID>toggle_vdebug()<CR>
-
-""" Colorscheme settings
-function! ColorScheme(cs)
-	if a:cs == 'solarized'
-		set background=dark
-		let g:solarized_termcolors = 256
-		colorscheme solarized
-		highlight clear SpecialKey
-		highlight link SpecialKey Identifier
-	elseif a:cs == 'seoul256'
-		let g:seoul256_background = 233
-		colorscheme seoul256
-	else
-		exec 'colorscheme '.a:cs
-	endif
-endfunction
-command! -nargs=1 -complete=color ColorScheme call ColorScheme('<args>')
-ColorScheme solarized
-
-function! TrailingWhitespaceToggle(...)
-	let hlgroup = a:0 ? a:0 : 'Search'
-	if !exists('s:trailing_whitespace_match')
-		let s:trailing_whitespace_match = matchadd(hlgroup, '\s\+$')
-		echo 'Trailing whitespace on'
-	else
-		call matchdelete(s:trailing_whitespace_match)
-		unlet s:trailing_whitespace_match
-		echo 'Trailing whitespace off'
-	endif
-endfunction
-nnoremap <F9> :<C-u>call TrailingWhitespaceToggle()<CR>
+" Run all config files
+runtime! config/*.vim
