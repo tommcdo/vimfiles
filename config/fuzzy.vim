@@ -1,7 +1,7 @@
-""" Fuzzy seach
+""" Fuzzy search
 
 function! Fuzzy(text)
-	let text = substitute(a:text, '.\zs', '.*', 'g')[:-3]
+	let text = '\c'.substitute(a:text, '.\zs', '.\\{-}', 'g')[:-6]
 	call search(text)
 	let @/ = text
 endfunction
