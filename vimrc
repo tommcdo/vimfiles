@@ -1,6 +1,7 @@
 """ General preferences
 syntax on                      " Enable syntax highlighting
 set term=xterm-256color        " Enable 256 terminal colors
+set t_ut=                      " Do not use current background color to clear
 set background=dark            " Use colorscheme for dark backgrounds
 set tabstop=4                  " Use a width of 4 for tabs
 set softtabstop=4              " Use a width of 4 when inserting tabs
