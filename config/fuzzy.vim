@@ -7,4 +7,4 @@ function! Fuzzy(text)
 endfunction
 
 command! -nargs=* Fuzzy call Fuzzy('<args>')
-nnoremap <Leader>/ :<C-U>Fuzzy 
+nnoremap z/ :<C-U>Fuzzy 
