@@ -71,4 +71,4 @@ function! s:toggle_vdebug()
     endif
 endfunction
 
-nnoremap <F4> <Plug>VdebugToggleMode
+nmap <F4> <Plug>VdebugToggleMode
