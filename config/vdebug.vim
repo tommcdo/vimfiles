@@ -25,6 +25,8 @@ let g:vdebug_keymap = {
 \	"eval_visual" : "<Plug>VdebugEvalVisual",
 \}
 
+nnoremap <Plug>VdebugToggleMode :<C-U>call <SID>toggle_vdebug()<CR>
+
 nmap <Leader>vr <Plug>VdebugRun 
 nmap <Leader>vR <Plug>VdebugRunToCursor
 nmap <Leader>vo <Plug>VdebugStepOver
@@ -45,7 +47,7 @@ function! s:toggle_vdebug()
         nmap o <Plug>VdebugStepOver
         nmap i <Plug>VdebugStepInto
         nmap u <Plug>VdebugStepOut
-        nmap x <Plug>VdebugClose
+        nmap x <Plug>VdebugClose<Plug>VdebugToggleMode
         nmap d <Plug>VdebugDetach
         nmap s <Plug>VdebugSetBreakpoint
         nmap c <Plug>VdebugGetContext
@@ -69,4 +71,4 @@ function! s:toggle_vdebug()
     endif
 endfunction
 
-nnoremap <F4> :<C-U>call <SID>toggle_vdebug()<CR>
+nnoremap <F4> <Plug>VdebugToggleMode
