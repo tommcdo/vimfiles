@@ -69,6 +69,9 @@ Bundle 'lepture/vim-jinja'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
 
+" Documentation plugins
+Bundle 'mudpile45/vim-phpdoc'
+
 " Miscellaneous plugins
 Bundle 'tommcdo/vim-arsey'
 
