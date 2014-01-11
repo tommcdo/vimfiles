@@ -50,6 +50,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
 " Tooling plugins
+Bundle 'itchyny/calendar.vim'
 Bundle 'joonty/vdebug'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
