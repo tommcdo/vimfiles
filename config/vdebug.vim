@@ -27,8 +27,8 @@ let g:vdebug_keymap = {
 
 nnoremap <Plug>VdebugToggleMode :<C-U>call <SID>toggle_vdebug()<CR>
 
-nmap <Leader>vr <Plug>VdebugRun 
-nmap <Leader>vR <Plug>VdebugRunToCursor
+nmap <Leader>vp <Plug>VdebugRun 
+nmap <Leader>vr <Plug>VdebugRunToCursor
 nmap <Leader>vo <Plug>VdebugStepOver
 nmap <Leader>vi <Plug>VdebugStepInto
 nmap <Leader>vu <Plug>VdebugStepOut
@@ -42,8 +42,8 @@ vmap <Leader>v= <Plug>VdebugEvalVisual
 function! s:toggle_vdebug()
     if !exists('s:vdebug_mode')
         let s:vdebug_mode = 1
-        nmap r <Plug>VdebugRun
-        nmap R <plug>VdebugRunToCursor
+        nmap p <Plug>VdebugRun
+        nmap r <plug>VdebugRunToCursor
         nmap o <Plug>VdebugStepOver
         nmap i <Plug>VdebugStepInto
         nmap u <Plug>VdebugStepOut
@@ -56,8 +56,8 @@ function! s:toggle_vdebug()
         echo "Vdebug mode on"
     else
         unlet s:vdebug_mode
+        nunmap p
         nunmap r
-        nunmap R
         nunmap o
         nunmap i
         nunmap u
