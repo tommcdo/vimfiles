@@ -1,7 +1,11 @@
 """ Colorscheme settings
 function! ColorScheme(cs)
-	if a:cs == 'solarized'
-		set background=dark
+	if a:cs == 'solarized' || a:cs == 'solarized-light'
+		if a:cs == 'solarized'
+			set background=dark
+		else
+			set background=light
+		endif
 		let g:solarized_termcolors = 256
 		colorscheme solarized
 		highlight clear SpecialKey
