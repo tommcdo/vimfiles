@@ -1,10 +1,10 @@
 " Provide a function to toggle iwhite (ignore whitespace)
 function! s:toggle_iwhite(opt)
 	if a:opt == -1 || (a:opt == 0 && &diffopt =~ 'iwhite')
-		echo 'set diffopt-=iwhite'
+		echo ':set diffopt-=iwhite'
 		set diffopt-=iwhite
 	elseif a:opt == 1 || (a:opt == 0 && &diffopt !~ 'iwhite')
-		echo 'set diffopt+=iwhite'
+		echo ':set diffopt+=iwhite'
 		set diffopt+=iwhite
 	endif
 endfunction
