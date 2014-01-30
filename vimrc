@@ -1,4 +1,5 @@
 """ General preferences
+filetype plugin on             " Enable loading of filetype plugins
 syntax on                      " Enable syntax highlighting
 set term=xterm-256color        " Enable 256 terminal colors
 set t_ut=                      " Do not use current background color to clear
