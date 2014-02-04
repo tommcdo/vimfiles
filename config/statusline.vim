@@ -4,8 +4,6 @@ let s:active_bg      = 233
 let s:active_fg      = 242
 let s:inactive_bg    = 237
 let s:inactive_fg    = 242
-let s:filename_color = 6
-let s:branch_color   = 178
 
 let s:filename = s:create_group(s:active_bg, 6, 'bold')
 let s:branch   = s:create_group(s:active_bg, 178, 'bold')
