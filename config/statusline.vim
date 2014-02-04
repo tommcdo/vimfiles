@@ -22,8 +22,8 @@ function! MyStatusLine()
 	let l:s .= ' '
 	let l:s .= s:hi('%{fugitive#statusline()}', s:branch)
 	let l:s .= ' '
-	let l:s .= s:hi('%{&modified?"✗":""}', 3)
-	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓":""}', s:green)
+	let l:s .= s:hi('%{&modified?"✗ ":""}', 3)
+	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
 	let l:s .= '%='
 	let l:s .= '%-14.(%l,%c%V%) '
 	let l:s .= '%P'
