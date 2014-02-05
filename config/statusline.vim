@@ -32,7 +32,13 @@ function! statusline#get_filename()
 	if &filetype == 'help'
 		let filename = expand('%:t')
 	elseif &filetype == 'gitcommit'
-		let filename = 'Git'
+		if expand('%') == '.git/index'
+			let filename = 'git status'
+		elseif expand('%:t') == 'COMMIT_EDITMSG'
+			let filename = 'git commit'
+		else
+			let filename = 'git'
+		endif
 	else
 		let filename = expand('%')
 	endif
