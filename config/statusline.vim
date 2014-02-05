@@ -4,7 +4,7 @@ let s:inactive_bg    = 237
 let s:inactive_fg    = 242
 
 function! s:define_colors()
-	let s:filename = s:create_group(s:active_bg, 188, 'bold')
+	let s:filename = s:create_group(s:active_bg, 250, 'bold')
 	let s:branch   = s:create_group(s:active_bg, 178, 'bold')
 	let s:branch_b = s:create_group(s:active_bg, 6, 'bold')
 	let s:green    = s:create_group(s:active_bg, 70, 'bold')
