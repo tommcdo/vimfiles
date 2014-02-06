@@ -23,7 +23,6 @@ function! MyStatusLine()
 	let l:s .= s:hi('%{&modified?"✗ ":""}', s:red)
 	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
 	let l:s .= '%='
-	let l:s .= s:hi('%{isdirectory(expand("%:h"))?"":"[New DIRECTORY] "}', s:red)
 	let l:s .= '%-14.(%l,%c%V%) '
 	let l:s .= '%P'
 	return l:s
