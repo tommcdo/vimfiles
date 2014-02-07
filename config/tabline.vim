@@ -6,24 +6,33 @@ highlight clear TabLineFill
 highlight link TabLineFill StatusLineNC
 
 function! MyTabLine()
+	let tabnum = tabpagenr()
 	let s = ''
-	for i in range(tabpagenr('$'))
+	for i in range(1, tabpagenr('$'))
 		" select the highlighting
-		if i + 1 == tabpagenr()
-			let s .= '%#TabLineSel#'
+		if i == tabnum
+			let color = '%#TabLineSel#'
 		else
-			let s .= '%#TabLine#'
+			let color = '%#TabLine#'
 		endif
-		let numwin = tabpagewinnr(i + 1, '$')
+		let s .= color
+		let numwin = tabpagewinnr(i, '$')
 		if numwin > 1
-			let s .= ' ' . numwin
+			let s .= ' '
+			if i == tabnum
+				let s .= '%#StatusLine#'
+			endif
+			let s .= numwin
+			if i == tabnum
+				let s .= color
+			endif
 		endif
 
 		" set the tab page number (for mouse clicks)
-		let s .= '%' . (i + 1) . 'T'
+		let s .= '%'.i.'T'
 
 		" the label is made by MyTabLabel()
-		let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
+		let s .= ' %{MyTabLabel('.i.')} '
 	endfor
 
 	" after the last tab fill with TabLineFill and reset tab page nr
