@@ -2,6 +2,8 @@ highlight clear TabLineSel
 highlight link TabLineSel User1
 highlight clear TabLine
 highlight link TabLine StatusLineNC
+highlight clear TabLineFill
+highlight link TabLineFill StatusLineNC
 
 function! MyTabLine()
 	let s = ''
