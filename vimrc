@@ -32,7 +32,6 @@ Bundle 'gmarik/vundle'
 
 " Navigation plugins
 Bundle 'aaronjensen/ctrlp.vim'
-Bundle 'deris/columnjump'
 Bundle 'qstrahl/vim-matchmaker'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tommcdo/vim-centaur'
@@ -52,7 +51,6 @@ Bundle 'tpope/vim-surround'
 
 " Tooling plugins
 Bundle 'AndrewRadev/writable_search.vim'
-Bundle 'itchyny/calendar.vim'
 Bundle 'joonty/vdebug'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
@@ -61,15 +59,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'tommcdo/vim-fugitive'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
-Bundle 'tpope/vim-dispatch'
 
 " Syntax and colorscheme plugins
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'junegunn/seoul256.vim'
 Bundle 'lepture/vim-jinja'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'puppetlabs/puppet-syntax-vim'
 
 " Documentation plugins
 Bundle 'mudpile45/vim-phpdoc'
