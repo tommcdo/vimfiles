@@ -51,6 +51,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 
 " Tooling plugins
+Bundle 'AndrewRadev/writable_search.vim'
 Bundle 'itchyny/calendar.vim'
 Bundle 'joonty/vdebug'
 Bundle 'mattn/gist-vim'
