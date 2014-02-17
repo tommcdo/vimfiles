@@ -1,5 +1,5 @@
 """ General preferences
-filetype plugin on             " Enable loading of filetype plugins
+filetype off                   " Temporarily disable filetype plugin (required by Vundle)
 syntax on                      " Enable syntax highlighting
 set term=xterm-256color        " Enable 256 terminal colors
 set t_ut=                      " Do not use current background color to clear
@@ -70,6 +70,8 @@ Bundle 'mudpile45/vim-phpdoc'
 
 " Miscellaneous plugins
 Bundle 'tommcdo/vim-arsey'
+
+filetype plugin on
 
 " Run all config files
 runtime! config/*.vim
