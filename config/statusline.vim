@@ -17,12 +17,11 @@ function! MyStatusLine()
 	let l:s .= s:hi('%{statusline#get_filename()}', s:filename)
 	let l:s .= ' %h'
 	let l:s .= s:hi('%{&readonly?"*":""}', s:red)
-	let l:s .= ' '
-	let l:s .= s:git_branch()
-	let l:s .= ' '
 	let l:s .= s:hi('%{&modified?"✗ ":""}', s:red)
 	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
 	let l:s .= '%='
+	let l:s .= s:git_branch()
+	let l:s .= '  '
 	let l:s .= '%-14.(%l,%c%V%) '
 	let l:s .= '%P'
 	return l:s
