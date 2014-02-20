@@ -12,6 +12,3 @@ nnoremap <Leader>ad :argdelete %<CR>
 
 " Jump to the current file in the arglist
 nnoremap <Leader>ac :argument<CR>
-
-" Add file under cursor to arglist (useful in :Gstatus window)
-nnoremap <Leader>af :argadd <C-R><C-F><CR>
