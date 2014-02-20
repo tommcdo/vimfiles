@@ -18,3 +18,7 @@ nnoremap <Leader>af :wincmd p <Bar> argadd <C-R><C-F> <Bar> wincmd p<CR>
 
 " Start a new local arglist in previous window with file under cursor (useful in :Gstatus window)
 nnoremap <Leader>aF :wincmd p <Bar> arglocal! <C-R><C-F> <Bar> wincmd p<CR>
+
+" Re-map unimpaired.vim's [a and ]a for cyclic arglist movement
+nnoremap ]a :<C-R>=(argidx() + 1) % argc() + 1<CR>argument<CR>
+nnoremap [a :<C-R>=(argc() + argidx() - 1) % argc() + 1<CR>argument<CR>
