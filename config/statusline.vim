@@ -20,8 +20,8 @@ function! MyStatusLine()
 	let l:s .= s:hi('%{&modified?"✗ ":""}', s:red)
 	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
 	let l:s .= '%='
-	let l:s .= s:hi('%{argc()>0?("A[".repeat("-",argidx()).(expand("%")==argv(argidx())?"+":"~").repeat("-",argc()-argidx()-1)."]  "):""}', s:green)
 	let l:s .= s:git_branch()
+	let l:s .= s:hi('%{argc()>0?("   A[".repeat("-",argidx()).(expand("%")==argv(argidx())?"+":"~").repeat("-",argc()-argidx()-1)."]"):""}', s:green)
 	let l:s .= '  '
 	let l:s .= '%-14.(%l,%c%V%) '
 	let l:s .= '%P'
