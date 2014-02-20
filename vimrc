@@ -59,6 +59,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'tommcdo/vim-fugitive'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
+Bundle 'tpope/vim-projectile'
 
 " Syntax and colorscheme plugins
 Bundle 'altercation/vim-colors-solarized'
