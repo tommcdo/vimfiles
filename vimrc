@@ -1,6 +1,5 @@
 """ General preferences
 filetype off                   " Temporarily disable filetype plugin (required by Vundle)
-syntax on                      " Enable syntax highlighting
 set term=xterm-256color        " Enable 256 terminal colors
 set t_ut=                      " Do not use current background color to clear
 set background=dark            " Use colorscheme for dark backgrounds
@@ -65,6 +64,7 @@ Bundle 'tpope/vim-projectile'
 " Syntax and colorscheme plugins
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'lepture/vim-jinja'
 
 " Documentation plugins
@@ -74,6 +74,7 @@ Bundle 'mudpile45/vim-phpdoc'
 Bundle 'tommcdo/vim-arsey'
 
 filetype plugin on
+syntax enable
 
 " Run all config files
 runtime! config/*.vim
