@@ -18,3 +18,5 @@ nnoremap <Leader>af :wincmd p <Bar> argadd <C-R><C-F> <Bar> wincmd p<CR>
 
 " Start a new local arglist in previous window with file under cursor (useful in :Gstatus window)
 nnoremap <Leader>aF :wincmd p <Bar> arglocal! <C-R><C-F> <Bar> wincmd p<CR>
+
+command! -nargs=* -complete=command ArgCmd execute "<args>" | argadd % | next
