@@ -20,3 +20,15 @@ nnoremap <Leader>af :wincmd p <Bar> argadd <C-R><C-F> <Bar> wincmd p<CR>
 nnoremap <Leader>aF :wincmd p <Bar> arglocal! <C-R><C-F> <Bar> wincmd p<CR>
 
 command! -nargs=* -complete=command ArgCmd execute "<args>" | argadd % | next
+
+function! s:arglist_complete(A, L, P)
+	let arg_to_cursor = strpart(a:L, 11, a:P)
+	let space_idx = stridx(arg_to_cursor, ' ')
+	if space_idx == -1
+		return filter(map(range(argc()), 'argv(v:val)'), 'v:val =~ a:A')
+	else
+		return []
+	endif
+endfunction
+
+command! -nargs=1 -complete=customlist,s:arglist_complete ArgEdit argedit <args>

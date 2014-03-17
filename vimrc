@@ -23,6 +23,7 @@ set preserveindent             " Try to preserve indentation when shifting
 set laststatus=2               " Show statusline even when there is only one window
 set winwidth=9                 " Allow current window to be as small as 9 columns wide
 set incsearch                  " Show search patterns as they are typed
+set fillchars=vert:\|,fold:\   " Use space to fill folded text lines
 
 """ Include bundles with Vundle
 set runtimepath+=~/.vim/bundle/vundle/
@@ -46,6 +47,7 @@ Bundle 'tommcdo/vim-lion'
 Bundle 'tommcdo/vim-text-objects'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
 
 " Tooling plugins
