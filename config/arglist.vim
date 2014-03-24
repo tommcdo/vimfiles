@@ -2,7 +2,7 @@
 nnoremap <Leader>al :arglocal<CR>
 
 " Add current buffer to arglist
-nnoremap <Leader>aa :argadd % <Bar> next<CR>
+nnoremap <Leader>aa :argedit %<CR>
 
 " Start a new local arglist with current buffer
 nnoremap <Leader>as :arglocal! %<CR>
@@ -19,7 +19,11 @@ nnoremap <Leader>af :wincmd p <Bar> argadd <C-R><C-F> <Bar> wincmd p<CR>
 " Start a new local arglist in previous window with file under cursor (useful in :Gstatus window)
 nnoremap <Leader>aF :wincmd p <Bar> arglocal! <C-R><C-F> <Bar> wincmd p<CR>
 
-command! -nargs=* -complete=command ArgCmd execute "<args>" | argadd % | next
+command! -nargs=* -complete=command ArgCmd execute "<args>" | argedit %
+
+function! s:arg_edit(file)
+	execute 'argedit '.(a:file == '' ? '%' : a:file)
+endfunction
 
 function! s:arglist_complete(A, L, P)
 	let arg_to_cursor = strpart(a:L, 11, a:P)
@@ -31,4 +35,4 @@ function! s:arglist_complete(A, L, P)
 	endif
 endfunction
 
-command! -nargs=1 -complete=customlist,s:arglist_complete ArgEdit argedit <args>
+command! -nargs=? -complete=customlist,s:arglist_complete ArgEdit call s:arg_edit("<args>")
