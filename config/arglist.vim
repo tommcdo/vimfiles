@@ -36,3 +36,11 @@ function! s:arglist_complete(A, L, P)
 endfunction
 
 command! -nargs=? -complete=customlist,s:arglist_complete ArgEdit call s:arg_edit("<args>")
+
+function! s:sargs()
+	execute 'arglocal! '.join(map(tabpagebuflist(), 'bufname(v:val)'), ' ')
+	execute winnr().'argument'
+	execute 'only'
+endfunction
+
+command! Sargs call s:sargs()
