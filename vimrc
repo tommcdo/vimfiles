@@ -41,7 +41,7 @@ Bundle 'tpope/vim-unimpaired'
 " Editing plugins
 Bundle 'PeterRincker/vim-argumentative'
 Bundle 'chrisbra/NrrwRgn'
-Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'qstrahl/vim-dentures'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tommcdo/vim-lion'
 Bundle 'tommcdo/vim-text-objects'
