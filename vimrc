@@ -39,6 +39,7 @@ Bundle 'tommcdo/vim-kangaroo'
 Bundle 'tpope/vim-unimpaired'
 
 " Editing plugins
+Bundle 'AndrewRadev/switch.vim'
 Bundle 'PeterRincker/vim-argumentative'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'qstrahl/vim-dentures'
