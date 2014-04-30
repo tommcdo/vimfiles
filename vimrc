@@ -68,6 +68,7 @@ Bundle 'wakatime/vim-wakatime'
 
 " Syntax and colorscheme plugins
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'groenewege/vim-less'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'lepture/vim-jinja'
