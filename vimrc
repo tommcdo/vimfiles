@@ -65,7 +65,6 @@ Bundle 'tommcdo/vim-kato'
 Bundle 'tommcdo/vim-fugitive'
 Bundle 'tommcdo/vim-fugitive-blame-ext'
 Bundle 'tpope/vim-projectionist'
-Bundle 'wakatime/vim-wakatime'
 
 " Syntax and colorscheme plugins
 Bundle 'altercation/vim-colors-solarized'
