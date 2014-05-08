@@ -27,7 +27,7 @@ let g:vdebug_keymap = {
 
 nnoremap <Plug>VdebugToggleMode :<C-U>call <SID>toggle_vdebug()<CR>
 
-nmap <Leader>vp <Plug>VdebugRun 
+nmap <Leader>vp <Plug>VdebugRun
 nmap <Leader>vr <Plug>VdebugRunToCursor
 nmap <Leader>vo <Plug>VdebugStepOver
 nmap <Leader>vi <Plug>VdebugStepInto
