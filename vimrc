@@ -24,6 +24,7 @@ set laststatus=2               " Show statusline even when there is only one win
 set winwidth=9                 " Allow current window to be as small as 9 columns wide
 set incsearch                  " Show search patterns as they are typed
 set fillchars=vert:\|,fold:\   " Use space to fill folded text lines
+set hidden                     " Allow modified buffers to become hidden
 
 """ Include bundles with Vundle
 set runtimepath+=~/.vim/bundle/vundle/
