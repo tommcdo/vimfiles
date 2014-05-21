@@ -23,6 +23,7 @@ function! MyStatusLine()
 	let l:s .= s:git_branch()
 	let l:s .= s:hi('%{argc()>0?("   A[".(argc()<10?repeat("-",argidx()).(expand("%")==argv(argidx())?"+":"~").repeat("-",argc()-argidx()-1):(argidx()+1)."/".argc())."]"):""}', s:green)
 	let l:s .= '  '
+	let l:s .= s:hi('%{statusline#grep_fallback()}', s:red)
 	let l:s .= '%-14.(%l,%c%V%) '
 	let l:s .= '%P'
 	return l:s
@@ -51,6 +52,10 @@ endfunction
 
 function! statusline#git_str(str)
 	return exists('b:git_dir') ? a:str : ''
+endfunction
+
+function! statusline#grep_fallback()
+	return exists('g:grep_fallback') ? g:grep_fallback.'  ' : ''
 endfunction
 
 function! s:git_branch()

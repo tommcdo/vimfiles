@@ -6,4 +6,7 @@ if executable('ag')
 elseif executable('ack')
 	set grepprg=ack\ --column\ --nogroup\ --nocolor
 	set grepformat=%f:%l:%c:%m
+	let g:grep_fallback = 'ack'
+else
+	let g:grep_fallback = 'grep'
 endif
