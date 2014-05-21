@@ -27,58 +27,60 @@ set fillchars=vert:\|,fold:\   " Use space to fill folded text lines
 set hidden                     " Allow modified buffers to become hidden
 
 """ Include bundles with Vundle
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set runtimepath+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
 " Navigation plugins
-Bundle 'aaronjensen/ctrlp.vim'
-Bundle 'qstrahl/vim-matchmaker'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tommcdo/vim-centaur'
-Bundle 'tommcdo/vim-kangaroo'
-Bundle 'tpope/vim-unimpaired'
+Plugin 'aaronjensen/ctrlp.vim'
+Plugin 'qstrahl/vim-matchmaker'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tommcdo/vim-centaur'
+Plugin 'tommcdo/vim-kangaroo'
+Plugin 'tpope/vim-unimpaired'
 
 " Editing plugins
-Bundle 'AndrewRadev/switch.vim'
-Bundle 'PeterRincker/vim-argumentative'
-Bundle 'chrisbra/NrrwRgn'
-Bundle 'qstrahl/vim-dentures'
-Bundle 'tommcdo/vim-exchange'
-Bundle 'tommcdo/vim-express'
-Bundle 'tommcdo/vim-lion'
-Bundle 'tommcdo/vim-ninja-feet'
-Bundle 'tommcdo/vim-text-objects'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-sleuth'
-Bundle 'tpope/vim-surround'
+Plugin 'AndrewRadev/switch.vim'
+Plugin 'PeterRincker/vim-argumentative'
+Plugin 'chrisbra/NrrwRgn'
+Plugin 'qstrahl/vim-dentures'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'tommcdo/vim-express'
+Plugin 'tommcdo/vim-lion'
+Plugin 'tommcdo/vim-ninja-feet'
+Plugin 'tommcdo/vim-text-objects'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
 
 " Tooling plugins
-Bundle 'AndrewRadev/writable_search.vim'
-Bundle 'joonty/vdebug'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mhinz/vim-tmuxify'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'tommcdo/vim-kato'
-Bundle 'tommcdo/vim-fugitive'
-Bundle 'tommcdo/vim-fugitive-blame-ext'
-Bundle 'tpope/vim-projectionist'
+Plugin 'AndrewRadev/writable_search.vim'
+Plugin 'joonty/vdebug'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mhinz/vim-tmuxify'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'tommcdo/vim-kato'
+Plugin 'tommcdo/vim-fugitive'
+Plugin 'tommcdo/vim-fugitive-blame-ext'
+Plugin 'tpope/vim-projectionist'
 
 " Syntax and colorscheme plugins
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'groenewege/vim-less'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'lepture/vim-jinja'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'groenewege/vim-less'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'lepture/vim-jinja'
 
 " Documentation plugins
-Bundle 'mudpile45/vim-phpdoc'
+Plugin 'mudpile45/vim-phpdoc'
 
 " Miscellaneous plugins
-Bundle 'tommcdo/vim-arsey'
+Plugin 'tommcdo/vim-arsey'
+
+call vundle#end()
 
 filetype plugin on
 syntax enable
