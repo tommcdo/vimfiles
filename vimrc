@@ -62,9 +62,9 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mhinz/vim-tmuxify'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
-Plugin 'tommcdo/vim-kato'
 Plugin 'tommcdo/vim-fugitive'
 Plugin 'tommcdo/vim-fugitive-blame-ext'
+Plugin 'tommcdo/vim-kato'
 Plugin 'tpope/vim-projectionist'
 
 " Syntax and colorscheme plugins
