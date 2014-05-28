@@ -1,0 +1,18 @@
+snippet foreach "PHP foreach loop"
+foreach (${1:\$array} as $2`!p snip.rv = " => " if len(t[2]) > 0 else ""`${3:\$value})
+{
+	$0
+}`!p
+if len(t[3]) > 0 and t[3][0] == '&':
+	snip += "unset(" + t[3][1:] + ");"
+else:
+	snip.rv = ''
+`
+endsnippet
+
+snippet func "PHP function"
+${1:public} function ${2:name}($3)
+{
+	$0
+}
+endsnippet

@@ -56,6 +56,7 @@ Plugin 'tpope/vim-surround'
 
 " Tooling plugins
 Plugin 'AndrewRadev/writable_search.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'joonty/vdebug'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
