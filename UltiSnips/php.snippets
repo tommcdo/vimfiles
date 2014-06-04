@@ -16,3 +16,17 @@ ${1:public} function ${2:name}($3)
 	$0
 }
 endsnippet
+
+snippet col "WebSuite browser column"
+array(
+	'code' => '${1}',
+	'label' => '`!p
+if len(t[1]) > 0:
+	snip.rv = ' '.join([s[0].upper() + s[1:] if len(s) > 0 else '' for s in t[1].replace('_', ' ').split(' ')])
+else:
+	snip.rv = ''
+`',
+	'datatype' => 'string',
+	'width' => 100,
+),
+endsnippet
