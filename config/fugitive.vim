@@ -5,7 +5,7 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>ge :Gedit<CR>
-nnoremap <Leader>gb :Gblame -w<CR>
+nnoremap <Leader>gb :Gblame -w -M<CR>
 
 " 'Input pending' maps (start Ex command without <CR>)
 nnoremap <Leader>gt :Gtabedit! 
