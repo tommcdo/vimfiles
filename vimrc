@@ -25,6 +25,7 @@ set winwidth=9                 " Allow current window to be as small as 9 column
 set incsearch                  " Show search patterns as they are typed
 set fillchars=vert:\|,fold:\   " Use space to fill folded text lines
 set hidden                     " Allow modified buffers to become hidden
+set breakindent                " Wrap lines, taking indentation into account
 
 """ Include bundles with Vundle
 set runtimepath+=~/.vim/bundle/Vundle.vim/
