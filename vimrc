@@ -26,6 +26,7 @@ set incsearch                  " Show search patterns as they are typed
 set fillchars=vert:\|,fold:\   " Use space to fill folded text lines
 set hidden                     " Allow modified buffers to become hidden
 set breakindent                " Wrap lines, taking indentation into account
+set showbreak=›                " Place a line break indicator on wrapped lines
 
 """ Include bundles with Vundle
 set runtimepath+=~/.vim/bundle/Vundle.vim/
@@ -66,10 +67,10 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mhinz/vim-tmuxify'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
-Plugin 'tommcdo/vim-fugitive'
 Plugin 'tommcdo/vim-fugitive-blame-ext'
 Plugin 'tommcdo/vim-kato'
 Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-projectionist'
 
 " Syntax and colorscheme plugins
