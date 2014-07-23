@@ -2,7 +2,7 @@
 
 " Standard maps
 nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gd :Gvdiff<CR>
 nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>ge :Gedit<CR>
 nnoremap <Leader>gb :Gblame -w -M<CR>
