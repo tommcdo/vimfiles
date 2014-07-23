@@ -26,7 +26,34 @@ if len(t[1]) > 0:
 else:
 	snip.rv = ''
 `',
-	'datatype' => 'string',
-	'width' => 100,
+	'datatype' => '${2:string}',
+	'width' => ${3:100},$0
 ),
+endsnippet
+
+snippet fmt "WebSuite browser column formatter"
+'formatter' => '$1',$0
+endsnippet
+
+snippet trunc "Truncated decimal formatter"
+'formatter' => 'truncatedDecimal:${1:4}',
+endsnippet
+
+snippet abl "ABL::instance() method invocation"
+ABL::instance()->${1:fillTable}(array(
+	'i_start_from' => ${2:0},
+	'i_batch_size' => ${3:0},
+	'c_where_clause' => '${4}',
+	'c_field_names' => json_encode(array(
+		'tt_temp' => array(
+			array(
+				${5}
+			),
+		),
+	)),
+));
+endsnippet
+
+snippet c
+'categories' => array('$0'),
 endsnippet
