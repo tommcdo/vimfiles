@@ -92,6 +92,9 @@ Plugin 'mudpile45/vim-phpdoc'
 " Miscellaneous plugins
 Plugin 'tommcdo/vim-arsey'
 
+" Manually add eclim directory to runtime path
+set runtimepath+=~/.vim/bundle/eclim
+
 call vundle#end()
 
 filetype plugin on
