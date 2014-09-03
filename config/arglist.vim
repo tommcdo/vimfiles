@@ -56,4 +56,4 @@ function! s:to_args(list, bang)
 endfunction
 
 command! -bang Qargs call s:to_args(getqflist(), "<bang>")
-command! -bang Largs call s:to_args(getloclist(), "<bang>")
+command! -bang Largs call s:to_args(getloclist(0), "<bang>")
