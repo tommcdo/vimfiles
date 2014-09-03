@@ -44,3 +44,14 @@ function! s:sargs()
 endfunction
 
 command! Sargs call s:sargs()
+
+function! s:to_args(list)
+	let l:dict = {}
+	for l:item in a:list
+		let l:dict[bufname(l:item.bufnr)] = ''
+	endfor
+	silent! execute 'args' join(keys(l:dict))
+endfunction
+
+command! Qargs call s:to_args(getqflist())
+command! Largs call s:to_args(getloclist())
