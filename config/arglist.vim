@@ -45,13 +45,15 @@ endfunction
 
 command! Sargs call s:sargs()
 
-function! s:to_args(list)
+function! s:to_args(list, bang)
 	let l:dict = {}
 	for l:item in a:list
 		let l:dict[bufname(l:item.bufnr)] = ''
 	endfor
-	silent! execute 'args' join(keys(l:dict))
+	let l:cmd = a:bang == '!' ? 'arglocal!' : 'args'
+	echo l:cmd
+	silent! execute l:cmd join(keys(l:dict))
 endfunction
 
-command! Qargs call s:to_args(getqflist())
-command! Largs call s:to_args(getloclist())
+command! -bang Qargs call s:to_args(getqflist(), "<bang>")
+command! -bang Largs call s:to_args(getloclist(), "<bang>")
