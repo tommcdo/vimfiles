@@ -25,3 +25,16 @@ if !exists('g:grep_fallback') || g:grep_fallback != 'grep'
 	nnoremap <Leader>s :<C-U>call <SID>search(0)<CR>
 	nnoremap <Leader>S :<C-U>call <SID>search(1)<CR>
 endif
+
+" Add a few commands to grep the quickfix and location lists
+function! s:grep_list(list, pattern, v)
+	let l:op = a:v == '!' ? '!~#' : '=~#'
+	let l:filter = 'v:val.text '.l:op.' "'.substitute(a:pattern, '"', '\\"', 'g').'"'
+	if a:list == 'q'
+		call setqflist(filter(getqflist(), l:filter))
+	else
+		call setloclist(0, filter(getloclist(0), l:filter))
+	endif
+endfunction
+command! -bang -nargs=* Qgrep call s:grep_list('q', '<args>', '<bang>')
+command! -bang -nargs=* Lgrep call s:grep_list('l', '<args>', '<bang>')
