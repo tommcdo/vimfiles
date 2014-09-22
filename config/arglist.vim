@@ -57,3 +57,13 @@ endfunction
 
 command! -bang Qargs call s:to_args(getqflist(), "<bang>")
 command! -bang Largs call s:to_args(getloclist(0), "<bang>")
+
+function! GetArgList()
+	return map(range(0, argc() - 1), 'argv(v:val)')
+endfunction
+
+function! s:arg_grep(query, bang)
+	let l:args = join(GetArgList())
+	execute 'grep'.a:bang a:query l:args
+endfunction
+command! -nargs=* -bang Agrep call s:arg_grep(<q-args>, <q-bang>)
