@@ -27,14 +27,18 @@ if !exists('g:grep_fallback') || g:grep_fallback != 'grep'
 endif
 
 " Add a few commands to grep the quickfix and location lists
-function! s:grep_list(list, pattern, v)
+function! s:grep_list(list, pattern, v, lhs)
+	let l:lhs_expressions = {'text': 'v:val.text', 'file': 'bufname(v:val.bufnr)'}
+	let l:lhs = l:lhs_expressions[a:lhs]
 	let l:op = a:v == '!' ? '!~#' : '=~#'
-	let l:filter = 'v:val.text '.l:op.' "'.escape(a:pattern, '"\').'"'
+	let l:filter = l:lhs.' '.l:op.' "'.escape(a:pattern, '"\').'"'
 	if a:list == 'q'
 		call setqflist(filter(getqflist(), l:filter))
 	else
 		call setloclist(0, filter(getloclist(0), l:filter))
 	endif
 endfunction
-command! -bang -nargs=* Qgrep call s:grep_list('q', <q-args>, '<bang>')
-command! -bang -nargs=* Lgrep call s:grep_list('l', <q-args>, '<bang>')
+command! -bang -nargs=* Qgrep call s:grep_list('q', <q-args>, <q-bang>, 'text')
+command! -bang -nargs=* Lgrep call s:grep_list('l', <q-args>, <q-bang>, 'text')
+command! -bang -nargs=* Qfilter call s:grep_list('q', <q-args>, <q-bang>, 'file')
+command! -bang -nargs=* Lfilter call s:grep_list('l', <q-args>, <q-bang>, 'file')

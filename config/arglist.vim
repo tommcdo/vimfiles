@@ -67,3 +67,11 @@ function! s:arg_grep(query, bang)
 	execute 'grep'.a:bang a:query l:args
 endfunction
 command! -nargs=* -bang Agrep call s:arg_grep(<q-args>, <q-bang>)
+
+function! s:arg_filter(query, bang)
+	let l:op = a:bang == '!' ? '!~#' : '=~#'
+	let l:filter = 'v:val '.l:op.' "'.escape(a:query, '"\').'"'
+	let l:args = join(filter(GetArgList(), l:filter))
+	execute 'args' l:args
+endfunction
+command! -nargs=* -bang Afilter call s:arg_filter(<q-args>, <q-bang>)
