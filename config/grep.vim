@@ -1,6 +1,26 @@
+function! s:version_compare(x, y)
+	let x = map(split(a:x, '\.'), 'str2nr(v:val)')
+	let y = map(split(a:y, '\.'), 'str2nr(v:val)')
+	let lenx = len(x)
+	let leny = len(y)
+	for i in range(0, min([lenx, leny]) - 1)
+		if x[i] > y[i]
+			return 1
+		elseif x[i] < y[i]
+			return -1
+		endif
+	endfor
+	return lenx - leny
+endfunction
+
 " Use the silver searcher (ag) for :grep if it is available
 if executable('ag')
-	set grepprg=ag\ --column\ --nogroup\ --nocolor
+	let s:ag_version = matchlist(split(system('ag --version'), '\n')[0], '\zs\d\+\(\.\d\+\)\+\ze')[0]
+	if s:version_compare(s:ag_version, '0.25.0') >= 0
+		set grepprg=ag\ --vimgrep
+	else
+		set grepprg=ag\ --column\ --nogroup\ --nocolor
+	endif
 	set grepformat=%f:%l:%c:%m
 " Or use ack
 elseif executable('ack')
