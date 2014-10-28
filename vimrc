@@ -86,9 +86,6 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'lepture/vim-jinja'
 
-" Documentation plugins
-Plugin 'mudpile45/vim-phpdoc'
-
 " Miscellaneous plugins
 Plugin 'tommcdo/vim-arsey'
 
