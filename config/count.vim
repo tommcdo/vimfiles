@@ -1,1 +1,1 @@
-command! -nargs=* Count %s/<args>//n
+command! -nargs=* Count %s/<args>//ng
