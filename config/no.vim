@@ -1,1 +1,1 @@
-command! NO bwipeout | buffer #
+command! NO buffer # | bwipeout #
