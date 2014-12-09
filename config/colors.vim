@@ -17,5 +17,5 @@ function! ColorScheme(cs)
 		exec 'colorscheme '.a:cs
 	endif
 endfunction
-command! -nargs=1 -complete=color ColorScheme call ColorScheme('<args>')
+command! -nargs=1 -complete=color ColorScheme call ColorScheme(<q-args>)
 ColorScheme solarized

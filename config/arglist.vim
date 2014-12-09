@@ -19,7 +19,7 @@ nnoremap <Leader>af :wincmd p <Bar> argadd <C-R><C-F> <Bar> wincmd p<CR>
 " Start a new local arglist in previous window with file under cursor (useful in :Gstatus window)
 nnoremap <Leader>aF :wincmd p <Bar> arglocal! <C-R><C-F> <Bar> wincmd p<CR>
 
-command! -nargs=* -complete=command ArgCmd execute "<args>" | argedit %
+command! -nargs=* -complete=command ArgCmd execute <q-args> | argedit %
 
 function! s:arg_edit(file)
 	execute 'argedit '.(a:file == '' ? '%' : a:file)
@@ -35,7 +35,7 @@ function! s:arglist_complete(A, L, P)
 	endif
 endfunction
 
-command! -nargs=? -complete=customlist,s:arglist_complete ArgEdit call s:arg_edit("<args>")
+command! -nargs=? -complete=customlist,s:arglist_complete ArgEdit call s:arg_edit(<q-args>)
 
 function! s:sargs()
 	execute 'arglocal! '.join(map(tabpagebuflist(), 'bufname(v:val)'), ' ')
@@ -55,8 +55,8 @@ function! s:to_args(list, bang)
 	silent! execute l:cmd join(keys(l:dict))
 endfunction
 
-command! -bang Qargs call s:to_args(getqflist(), "<bang>")
-command! -bang Largs call s:to_args(getloclist(0), "<bang>")
+command! -bang Qargs call s:to_args(getqflist(), <q-bang>)
+command! -bang Largs call s:to_args(getloclist(0), <q-bang>)
 
 function! GetArgList()
 	return map(range(0, argc() - 1), 'argv(v:val)')

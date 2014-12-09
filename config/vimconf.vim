@@ -12,4 +12,4 @@ function! s:conf_complete(A, L, P)
 	endif
 endfunction
 
-command! -nargs=1 -complete=customlist,s:conf_complete VimConf call s:edit_conf_file('<args>')
+command! -nargs=1 -complete=customlist,s:conf_complete VimConf call s:edit_conf_file(<q-args>)

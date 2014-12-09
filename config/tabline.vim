@@ -71,6 +71,6 @@ function! s:set_title(title, bang)
 	endif
 endfunction
 
-command! -bang -nargs=* TabTitle call s:set_title("<args>", "<bang>")
+command! -bang -nargs=* TabTitle call s:set_title(<q-args>, <q-bang>)
 
 set tabline=%!MyTabLine()
