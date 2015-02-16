@@ -1,5 +1,5 @@
 """ General preferences
-filetype off                   " Temporarily disable filetype plugin (required by Vundle)
+filetype plugin on             " Enable loading of plugins for specific filetypes
 set term=xterm-256color        " Enable 256 terminal colors
 set t_ut=                      " Do not use current background color to clear
 set background=dark            " Use colorscheme for dark backgrounds
@@ -33,69 +33,66 @@ if v:version >= 704 && has('patch338')
 	set showbreak=›                " Place a line break indicator on wrapped lines
 end
 
-""" Include bundles with Vundle
-set runtimepath+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Navigation plugins
-Plugin 'aaronjensen/ctrlp.vim'
-Plugin 'qstrahl/vim-matchmaker'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tommcdo/vim-centaur'
-Plugin 'tommcdo/vim-kangaroo'
-Plugin 'tpope/vim-unimpaired'
+Plug 'aaronjensen/ctrlp.vim'
+Plug 'qstrahl/vim-matchmaker'
+Plug 'scrooloose/nerdtree'
+Plug 'tommcdo/vim-centaur'
+Plug 'tommcdo/vim-kangaroo'
+Plug 'tpope/vim-unimpaired'
 
 " Editing plugins
-Plugin 'AndrewRadev/switch.vim'
-Plugin 'PeterRincker/vim-argumentative'
-Plugin 'chrisbra/NrrwRgn'
-Plugin 'qstrahl/vim-dentures'
-Plugin 'tommcdo/vim-exchange'
-Plugin 'tommcdo/vim-express'
-Plugin 'tommcdo/vim-lion'
-Plugin 'tommcdo/vim-ninja-feet'
-Plugin 'tommcdo/vim-nowchangethat'
-Plugin 'tommcdo/vim-text-objects'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-surround'
+Plug 'AndrewRadev/switch.vim'
+Plug 'PeterRincker/vim-argumentative'
+Plug 'chrisbra/NrrwRgn'
+Plug 'qstrahl/vim-dentures'
+Plug 'tommcdo/vim-exchange'
+Plug 'tommcdo/vim-express'
+Plug 'tommcdo/vim-lion'
+Plug 'tommcdo/vim-ninja-feet'
+Plug 'tommcdo/vim-nowchangethat'
+Plug 'tommcdo/vim-text-objects'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
 
 " Tooling plugins
-Plugin 'AndrewRadev/writable_search.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'joonty/vdebug'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'mhinz/vim-tmuxify'
-Plugin 'scrooloose/syntastic'
-Plugin 'sjl/gundo.vim'
-Plugin 'tommcdo/vim-fubitive'
-Plugin 'tommcdo/vim-fugitive-blame-ext'
-Plugin 'tommcdo/vim-kato'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-projectionist'
+Plug 'AndrewRadev/writable_search.vim'
+Plug 'SirVer/ultisnips'
+Plug 'joonty/vdebug'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mhinz/vim-tmuxify'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
+Plug 'tommcdo/vim-fubitive'
+Plug 'tommcdo/vim-fugitive-blame-ext'
+Plug 'tommcdo/vim-kato'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-projectionist'
 
 " Syntax and colorscheme plugins
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'groenewege/vim-less'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'lepture/vim-jinja'
+Plug 'altercation/vim-colors-solarized'
+Plug 'groenewege/vim-less'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'kchmck/vim-coffee-script'
+Plug 'lepture/vim-jinja'
 
 " Miscellaneous plugins
-Plugin 'tommcdo/vim-arsey'
+Plug 'tommcdo/vim-arsey'
+
+call plug#end()
+filetype indent off
 
 " Manually add eclim directory to runtime path
 set runtimepath+=~/.vim/bundle/eclim
 
-call vundle#end()
-
-filetype plugin on
 syntax enable
 
 " Run all config files
