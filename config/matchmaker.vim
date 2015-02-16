@@ -1,2 +1,2 @@
 """ Matchmaker maps and settings
-nnoremap <F8> :MatchmakerToggle<CR>
+nnoremap com :<C-U>MatchmakerToggle<CR>
