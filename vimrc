@@ -44,7 +44,6 @@ Plug 'tommcdo/vim-kangaroo'
 Plug 'tpope/vim-unimpaired'
 
 " Editing plugins
-Plug 'AndrewRadev/switch.vim'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'chrisbra/NrrwRgn'
 Plug 'qstrahl/vim-dentures'
@@ -62,7 +61,6 @@ Plug 'tpope/vim-surround'
 
 " Tooling plugins
 Plug 'AndrewRadev/writable_search.vim'
-Plug 'SirVer/ultisnips'
 Plug 'joonty/vdebug'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
