@@ -66,6 +66,8 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mhinz/vim-tmuxify'
 Plug 'scrooloose/syntastic'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'sjl/gundo.vim'
 Plug 'tommcdo/vim-fubitive'
 Plug 'tommcdo/vim-fugitive-blame-ext'
