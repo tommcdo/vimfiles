@@ -53,10 +53,15 @@ function! s:grep_list(list, pattern, v, lhs)
 	let l:op = a:v == '!' ? '!~#' : '=~#'
 	let l:filter = l:lhs.' '.l:op.' "'.escape(a:pattern, '"\').'"'
 	if a:list == 'q'
+		let l:original_size = len(getqflist())
 		call setqflist(filter(getqflist(), l:filter))
+		let l:new_size = len(getqflist())
 	else
+		let l:original_size = len(getloclist())
 		call setloclist(0, filter(getloclist(0), l:filter))
+		let l:new_size = len(getloclist())
 	endif
+	echo l:original_size 'items trimmed to' l:new_size
 endfunction
 command! -bang -nargs=* Qgrep call s:grep_list('q', <q-args>, <q-bang>, 'text')
 command! -bang -nargs=* Lgrep call s:grep_list('l', <q-args>, <q-bang>, 'text')
