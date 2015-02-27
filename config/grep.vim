@@ -57,9 +57,9 @@ function! s:grep_list(list, pattern, v, lhs)
 		call setqflist(filter(getqflist(), l:filter))
 		let l:new_size = len(getqflist())
 	else
-		let l:original_size = len(getloclist())
+		let l:original_size = len(getloclist(0))
 		call setloclist(0, filter(getloclist(0), l:filter))
-		let l:new_size = len(getloclist())
+		let l:new_size = len(getloclist(0))
 	endif
 	echo l:original_size 'items trimmed to' l:new_size
 endfunction
