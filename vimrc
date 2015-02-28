@@ -41,6 +41,7 @@ Plug 'qstrahl/vim-matchmaker'
 Plug 'scrooloose/nerdtree'
 Plug 'tommcdo/vim-centaur'
 Plug 'tommcdo/vim-kangaroo'
+Plug 'tommcdo/vim-lister'
 Plug 'tpope/vim-unimpaired'
 
 " Editing plugins
