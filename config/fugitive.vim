@@ -13,3 +13,13 @@ nnoremap <Leader>gt :Gtabedit!
 
 " Delete fugitive buffers when they become hidden
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" Open a :Gblame window with commit for current line highlighted
+function! s:expose(args)
+	execute 'Gblame' a:args
+	normal C
+	execute 'match Search /^'.expand('<cword>').'/'
+	wincmd p
+endfunction
+command! -nargs=* GExpose silent! call s:expose(<q-args>)
+nnoremap <Leader>gx :GExpose -w -M<CR>
