@@ -47,6 +47,8 @@ Plug 'tpope/vim-unimpaired'
 " Editing plugins
 Plug 'PeterRincker/vim-argumentative'
 Plug 'chrisbra/NrrwRgn'
+Plug 'kana/vim-textobj-function'
+Plug 'kana/vim-textobj-user'
 Plug 'qstrahl/vim-dentures'
 Plug 'tommcdo/vim-exchange'
 Plug 'tommcdo/vim-express'
