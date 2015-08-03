@@ -36,7 +36,7 @@ end
 call plug#begin('~/.vim/plugged')
 
 " Navigation plugins
-Plug 'aaronjensen/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'qstrahl/vim-matchmaker'
 Plug 'scrooloose/nerdtree'
 Plug 'tommcdo/vim-centaur'
