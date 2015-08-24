@@ -90,6 +90,7 @@ Plug 'lepture/vim-jinja'
 Plug 'romainl/flattened'
 
 " Miscellaneous plugins
+Plug 'kana/vim-submode'
 Plug 'tommcdo/vim-arsey'
 
 call plug#end()
