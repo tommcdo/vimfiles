@@ -14,3 +14,6 @@ nnoremap <silent> <buffer> <expr> <C-]> <SID>java_search_context('<C-]>', 'edit'
 nnoremap <silent> <buffer> <expr> <C-W>] <SID>java_search_context('<C-W>]', 'split')
 
 nnoremap <silent> <buffer> <expr> <C-T> <SID>java_search_pop()
+
+nnoremap <silent> <buffer> <Leader>ji :<C-U>JavaSearchContext -t classOrInterface -x implementors<CR>
+nnoremap <silent> <buffer> <Leader>jo :<C-I>JavaImportOrganize<CR>
