@@ -26,7 +26,7 @@ set incsearch                  " Show search patterns as they are typed
 set fillchars=vert:\|,fold:\   " Use space to fill folded text lines
 set hidden                     " Allow modified buffers to become hidden
 set path=**                    " Look for files anywhere in the current directory
-set directory=~/.vim/swap      " Put swap files in a different directory
+set directory=~/.vim/swap//    " Put swap files in a different directory
 
 if v:version >= 704 && has('patch338')
 	set breakindent                " Wrap lines, taking indentation into account
