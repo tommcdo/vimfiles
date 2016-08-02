@@ -1,17 +1,29 @@
-function! s:add()
+function! s:add(text, bang)
 	let pos = getpos('.')
+	let text = a:text
+	if text == ''
+		let text = getline(pos[1])
+	endif
 	let item = {
 	\	'bufnr': bufnr('%'),
 	\	'lnum': pos[1],
 	\	'col': pos[2],
-	\	'text': getline(pos[1])
+	\	'text': text
 	\ }
-	call setloclist(0, [item], 'a')
+	if a:bang == '!'
+		call setqflist([item], 'a')
+	else
+		call setloclist(0, [item], 'a')
+	endif
 endfunction
 
-function! s:clear()
-	call setloclist(0, [], ' ')
+function! s:clear(bang)
+	if a:bang == '!'
+		call setqflist([], ' ')
+	else
+		call setloclist(0, [], ' ')
+	endif
 endfunction
 
-command! LokiAdd call s:add()
-command! LokiClear call s:clear()
+command! -nargs=* -bang LokiAdd call s:add(<q-args>, <q-bang>)
+command! -bang LokiClear call s:clear(<q-bang>)
