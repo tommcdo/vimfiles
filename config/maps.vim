@@ -5,6 +5,9 @@ cnoremap <expr> <C-R><Space> expand('%:t:r')
 " Switch to alternate file
 nnoremap <Space> <C-^>
 
+" Close the preview window
+nnoremap <BS> <C-W>z
+
 function! s:custom_gf()
 	let l:file = expand('<cfile>')
 	try
