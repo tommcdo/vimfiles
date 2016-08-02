@@ -1,10 +1,11 @@
 let g:elephant_map = {
-	\ 'f': function('elephant#current_file'),
-	\ 'p': function('elephant#vcs_project')
+	\ 'f': 'elephant#current_file',
+	\ 'p': 'elephant#vcs_project'
 \ }
 
 function! elephant#prompt(base)
-	let l:Fcn = get(g:elephant_map, a:base, function('elephant#identity'))
+	let l:base = tolower(a:base)
+	let l:Fcn = function(get(g:elephant_map, l:base, 'elephant#identity'))
 	let l:basedir = l:Fcn()
 	execute 'lcd' l:basedir
 	let l:file = fnamemodify(input(l:basedir.'/', '', 'file'), ':p')
