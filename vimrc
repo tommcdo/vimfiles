@@ -33,6 +33,8 @@ if v:version >= 704 && has('patch338')
 	set showbreak=›                " Place a line break indicator on wrapped lines
 end
 
+let g:plug_threads = 1
+
 call plug#begin('~/.vim/plugged')
 
 " Navigation plugins
