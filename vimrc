@@ -99,7 +99,7 @@ call plug#end()
 filetype indent off
 
 " Manually add eclim directory to runtime path
-set runtimepath+=~/.vim/bundle/eclim
+set runtimepath+=~/.vim/bundle
 
 syntax enable
 
