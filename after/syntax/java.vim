@@ -10,5 +10,5 @@ highlight link ClassName Identifier
 syntax match Constructor display '\(\(public\|protected\|private\)\s\+\)\@<=\([A-Z][a-z0-9]*\)\+\( *(\)\@='
 highlight link Constructor PreProc
 
-syntax match Final '\<[A-Z]\{2,}\%(_[A-Z]\+\)*\>'
+syntax match Final '\<[A-Z][A-Z0-9]\+\%(_[A-Z0-9]\+\)*\>'
 highlight Final ctermfg=61
