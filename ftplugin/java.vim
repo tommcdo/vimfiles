@@ -15,5 +15,18 @@ nnoremap <silent> <buffer> <expr> <C-W>] <SID>java_search_context('<C-W>]', 'spl
 
 nnoremap <silent> <buffer> <expr> <C-T> <SID>java_search_pop()
 
-nnoremap <silent> <buffer> <Leader>ji :<C-U>JavaSearchContext -t classOrInterface -x implementors<CR>
-nnoremap <silent> <buffer> <Leader>jo :<C-I>JavaImportOrganize<CR>
+if !exists('g:unite_source_menu_menus')
+	let g:unite_source_menu_menus = {}
+endif
+let g:unite_source_menu_menus.java = {
+	\ 'description': 'Java'
+\ }
+let g:unite_source_menu_menus.java.command_candidates = {
+	\ 'Find Problems': 'ProjectProblems!',
+	\ 'Organize Imports': 'JavaImportOrganize',
+	\ 'Refresh Project': 'ProjectRefresh',
+	\ 'Find Usages': 'JavaSearchContext -t all -x references',
+	\ 'Find Implementations': 'JavaSearchContext -t classOrInterface -x implementors',
+	\ 'Refactor: Rename': 'execute "JavaRename" input("New name: ", expand("<cword>"))'
+\ }
+nnoremap <buffer> <C-J> :<C-U>Unite -here -smartcase -start-insert -direction=botright menu:java<CR>
