@@ -9,6 +9,7 @@ function! s:define_colors()
 	let s:branch_b = s:create_group(s:active_bg, 6, 'bold')
 	let s:green    = s:create_group(s:active_bg, 70, 'bold')
 	let s:red      = s:create_group(s:active_bg, 88, 'bold')
+	let s:flare    = s:create_group(s:active_bg, 64, 'bold')
 endfunction
 
 function! MyStatusLine()
@@ -20,6 +21,7 @@ function! MyStatusLine()
 	let l:s .= s:hi('%{&modified?"✗ ":""}', s:red)
 	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
 	let l:s .= '%='
+	let l:s .= s:hi('%{statusline#buffer_flare()} ', s:flare)
 	let l:s .= s:git_branch()
 	let l:s .= s:hi('%{argc()>0?("   A[".(argc()<10?repeat("-",argidx()).(expand("%")==argv(argidx())?"+":"~").repeat("-",argc()-argidx()-1):(argidx()+1).(expand("%")==argv(argidx())?"/":"|").argc())."]"):""}', s:green)
 	let l:s .= '  '
@@ -56,6 +58,10 @@ endfunction
 
 function! statusline#grep_fallback()
 	return exists('g:grep_fallback') ? g:grep_fallback.'  ' : ''
+endfunction
+
+function! statusline#buffer_flare()
+	return exists('b:statusline_flare') ? b:statusline_flare : ''
 endfunction
 
 function! s:git_branch()
