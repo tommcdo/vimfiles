@@ -26,3 +26,20 @@ function! s:expose(args)
 endfunction
 command! -nargs=* GExpose silent! call s:expose(<q-args>)
 nnoremap <Leader>gx :GExpose -w -M<CR>
+
+" Enable automatic fold opening/closing for commit buffers
+function! s:fold_openclose_on()
+	let s:foldopen = &foldopen
+	let s:foldclose = &foldclose
+	set foldopen=all
+	set foldclose=all
+endfunction
+function! s:fold_openclose_off()
+	let &foldopen = s:foldopen
+	let &foldclose = s:foldclose
+endfunction
+augroup FugitiveFoldSettings
+	autocmd!
+	autocmd BufEnter fugitive://*//[0-9a-f]\\\{7,48\} call s:fold_openclose_on()
+	autocmd BufLeave fugitive://*//[0-9a-f]\\\{7,48\} call s:fold_openclose_off()
+augroup END
