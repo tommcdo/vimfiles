@@ -22,6 +22,7 @@ function! MyStatusLine()
 	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
 	let l:s .= '%='
 	let l:s .= s:hi('%{statusline#buffer_flare()} ', s:flare)
+	let l:s .= s:eclim_problems()
 	let l:s .= s:git_branch()
 	let l:s .= s:hi('%{argc()>0?("   A[".(argc()<10?repeat("-",argidx()).(expand("%")==argv(argidx())?"+":"~").repeat("-",argc()-argidx()-1):(argidx()+1).(expand("%")==argv(argidx())?"/":"|").argc())."]"):""}', s:green)
 	let l:s .= '  '
@@ -62,6 +63,20 @@ endfunction
 
 function! statusline#buffer_flare()
 	return exists('b:statusline_flare') ? b:statusline_flare : ''
+endfunction
+
+function! statusline#eclim_str(str)
+	return eclim#project#util#GetCurrentProjectName() != '' ? a:str : ''
+endfunction
+
+function! s:eclim_problems()
+	let l:s = ''
+	let l:s .= s:hi('%{statusline#eclim_str("[")}', s:filename)
+	let l:s .= s:hi('%{statusline#eclim_str(eclim#project#problems#IsProblemsList()&&len(getqflist())>0?len(getqflist())." problem".(len(getqflist())==1?"":"s"):"")}', s:red)
+	let l:s .= s:hi('%{statusline#eclim_str(eclim#project#problems#IsProblemsList()&&len(getqflist())==0?"no problems":"")}', s:green)
+	let l:s .= s:hi('%{statusline#eclim_str(!eclim#project#problems#IsProblemsList()?statusline#eclim_str("?"):"")}', s:red)
+	let l:s .= s:hi('%{statusline#eclim_str("] ")}', s:filename)
+	return l:s
 endfunction
 
 function! s:git_branch()
