@@ -7,3 +7,11 @@ function! s:reset_indent(level)
 endfunction
 
 command! -nargs=* ResetIndent call <SID>reset_indent(<q-args>)
+
+function! s:obliterate()
+	set autoindent nocindent indentexpr= nosmartindent
+endfunction
+augroup DisableAllIndent
+	autocmd!
+	autocmd BufEnter * call s:obliterate()
+augroup END
