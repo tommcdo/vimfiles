@@ -12,7 +12,10 @@ nnoremap <Leader>gg :Git log --graph --all --decorate<CR>
 nnoremap <Leader>gt :Gtabedit! 
 
 " Delete fugitive buffers when they become hidden
-autocmd BufReadPost fugitive://* set bufhidden=delete
+augroup FugitiveDeleteBuffers
+	autocmd!
+	autocmd BufReadPost fugitive://* set bufhidden=delete
+augroup END
 
 " Open a :Gblame window with commit for current line highlighted
 function! s:expose(args)
