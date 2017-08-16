@@ -43,3 +43,23 @@ augroup FugitiveFoldSettings
 	autocmd BufEnter fugitive://*//[0-9a-f]\\\{7,48\} call s:fold_openclose_on()
 	autocmd BufLeave fugitive://*//[0-9a-f]\\\{7,48\} call s:fold_openclose_off()
 augroup END
+
+" Create a :Grange command to populate the quickfix list with a range of commits
+let s:log_messages = {}
+function! s:log_message(commit) " Stolen from https://github.com/tommcdo/vim-fugitive-blame-ext
+	if a:commit =~ '^0\+$'
+		return '(Not Committed Yet)'
+	endif
+	if !has_key(s:log_messages, a:commit)
+		let cmd_output = system('git --git-dir='.b:git_dir.' show --oneline '.a:commit)
+		let first_line = split(cmd_output, '\n')[0]
+		let s:log_messages[a:commit] = substitute(first_line, '[a-z0-9]\+ ', '', '')
+	endif
+	return s:log_messages[a:commit]
+endfunction
+function! s:edit_commit_range(range_spec)
+	let git_dir = fugitive#extract_git_dir('.')
+	let commits = systemlist('git rev-list ' . a:range_spec)
+	call setqflist(map(commits, '{"filename": "fugitive://" . git_dir . "//" . v:val, "text": s:log_message(v:val)}'))
+endfunction
+command! -nargs=1 Grange call s:edit_commit_range(<q-args>)
