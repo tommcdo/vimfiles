@@ -10,6 +10,7 @@ function! s:define_colors()
 	let s:green    = s:create_group(s:active_bg, 70, 'bold')
 	let s:red      = s:create_group(s:active_bg, 88, 'bold')
 	let s:flare    = s:create_group(s:active_bg, 64, 'bold')
+	let s:blue     = s:create_group(s:active_bg, 33, 'bold')
 endfunction
 
 function! MyStatusLine()
@@ -22,6 +23,7 @@ function! MyStatusLine()
 	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
 	let l:s .= '%='
 	let l:s .= s:hi('%{statusline#buffer_flare()} ', s:flare)
+	let l:s .= s:hi('%{statusline#kangaroo()}', s:blue)
 	let l:s .= s:eclim_problems()
 	let l:s .= s:git_branch()
 	let l:s .= s:hi('%{argc()>0?("   A[".(argc()<10?repeat("-",argidx()).(expand("%")==argv(argidx())?"+":"~").repeat("-",argc()-argidx()-1):(argidx()+1).(expand("%")==argv(argidx())?"/":"|").argc())."]"):""}', s:green)
@@ -67,6 +69,14 @@ endfunction
 
 function! statusline#eclim_str(str)
 	return eclim#project#util#GetCurrentProjectName() != '' ? a:str : ''
+endfunction
+
+function! statusline#kangaroo()
+	let l:altitude = kangaroo#altitude()
+	if l:altitude > 0
+		return repeat('|', l:altitude) . ' '
+	endif
+	return ''
 endfunction
 
 function! s:eclim_problems()
