@@ -27,6 +27,8 @@ let g:unite_source_menu_menus.java.command_candidates = {
 	\ 'Refresh Project': 'ProjectRefresh',
 	\ 'Find Usages': 'JavaSearchContext -t all -x references',
 	\ 'Find Implementations': 'JavaSearchContext -t classOrInterface -x implementors',
+	\ 'Show Call Hierarchy': 'JavaCallHierarchy',
+	\ 'Show JavaDoc': 'JavaDocPreview',
 	\ 'Refactor: Rename': 'execute "JavaRename" input("New name: ", expand("<cword>"))'
 \ }
 nnoremap <buffer> <C-J> :<C-U>Unite -here -smartcase -start-insert -direction=botright menu:java<CR>
