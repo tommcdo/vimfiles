@@ -21,6 +21,7 @@ function! MyStatusLine()
 	let l:s .= s:hi('%{&readonly?"*":""}', s:red)
 	let l:s .= s:hi('%{&modified?"✗ ":""}', s:red)
 	let l:s .= s:hi('%{(&modifiable&&!&modified)?"✓ ":""}', s:green)
+	let l:s .= s:hi('%{statusline#modified_buffers()}', s:red)
 	let l:s .= '%='
 	let l:s .= s:hi('%{statusline#buffer_flare()} ', s:flare)
 	let l:s .= s:hi('%{statusline#kangaroo()}', s:blue)
@@ -49,6 +50,11 @@ function! statusline#get_filename()
 		let filename = expand('%')
 	endif
 	return filename
+endfunction
+
+function! statusline#modified_buffers()
+	let l:modified_buffers = len(filter(range(1, bufnr('$')), 'getbufvar(v:val, "&modified") && buflisted(v:val)')) - &modified
+	return l:modified_buffers == 0 ? '': '(+'.l:modified_buffers.')'
 endfunction
 
 function! statusline#git_branch()
