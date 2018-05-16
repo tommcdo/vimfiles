@@ -89,6 +89,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'groenewege/vim-less'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
 Plug 'romainl/flattened', { 'branch' : '6cd6f45' }
 
