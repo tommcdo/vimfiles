@@ -39,13 +39,13 @@ let g:plug_threads = 1
 call plug#begin('~/.vim/plugged')
 
 " Navigation plugins
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'qstrahl/vim-matchmaker'
 Plug 'scrooloose/nerdtree'
 Plug 'tommcdo/vim-centaur'
 Plug 'tommcdo/vim-kangaroo'
 Plug 'tommcdo/vim-lister'
 Plug 'tpope/vim-unimpaired'
+Plug 'junegunn/fzf', { 'do': './install --bin' }
 
 " Editing plugins
 Plug 'PeterRincker/vim-argumentative'
