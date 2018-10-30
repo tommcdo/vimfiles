@@ -10,6 +10,6 @@ function! s:toggle_iwhite(opt)
 endfunction
 
 " Add mappings for toggling and setting iwhite (in the style of unimpaired.vim)
-nnoremap coD :call <SID>toggle_iwhite(0)<CR>
+nnoremap yoD :call <SID>toggle_iwhite(0)<CR>
 nnoremap [oD :call <SID>toggle_iwhite(1)<CR>
 nnoremap ]oD :call <SID>toggle_iwhite(-1)<CR>

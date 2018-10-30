@@ -9,4 +9,4 @@ function! TrailingWhitespaceToggle(...)
 		echo 'Trailing whitespace off'
 	endif
 endfunction
-nnoremap cot :<C-u>call TrailingWhitespaceToggle()<CR>
+nnoremap yot :<C-u>call TrailingWhitespaceToggle()<CR>

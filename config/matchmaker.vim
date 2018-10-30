@@ -1,2 +1,2 @@
 """ Matchmaker maps and settings
-nnoremap com :<C-U>MatchmakerToggle<CR>
+nnoremap yom :<C-U>MatchmakerToggle<CR>
