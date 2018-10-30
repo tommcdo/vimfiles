@@ -3,7 +3,7 @@ if !exists('w:tag_stack_index')
 endif
 
 function! s:java_search_context(default, edit_command)
-	return exists('g:EclimDisabled') ? s:default : ":\<C-U>let w:tag_stack_index += 1\<CR>:KangarooPush\<CR>:JavaSearchContext -a ".a:edit_command."\<CR>"
+	return exists('g:EclimDisabled') ? a:default : ":\<C-U>let w:tag_stack_index += 1\<CR>:KangarooPush\<CR>:JavaSearchContext -a ".a:edit_command."\<CR>"
 endfunction
 
 function! s:java_search_pop()
