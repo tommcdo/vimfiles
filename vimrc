@@ -69,7 +69,6 @@ Plug 'tpope/vim-surround'
 
 " Tooling plugins
 Plug 'AndrewRadev/writable_search.vim'
-Plug 'joonty/vdebug'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mhinz/vim-tmuxify'
