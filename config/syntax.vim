@@ -8,3 +8,8 @@ function! s:edit_current_syntax(create)
 endfunction
 
 command! -bang EditSyntax call s:edit_current_syntax(<bang>0)
+
+augroup ReloadSyntaxOverrides
+	autocmd!
+	autocmd ColorScheme * runtime! after/syntax/*.vim
+augroup END

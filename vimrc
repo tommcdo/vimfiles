@@ -107,3 +107,5 @@ syntax enable
 
 " Run all config files
 runtime! config/*.vim
+
+colorscheme flattened_dark

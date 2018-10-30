@@ -123,3 +123,8 @@ call s:define('StatusLineNC', s:inactive_bg, s:inactive_fg, 'none')
 
 call s:define_colors()
 set statusline=%!MyStatusLine()
+
+augroup ReloadStatuslineConfig
+	autocmd!
+	autocmd ColorScheme * source <sfile>
+augroup END

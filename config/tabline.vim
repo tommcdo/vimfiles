@@ -74,3 +74,8 @@ endfunction
 command! -bang -nargs=* TabTitle call s:set_title(<q-args>, <q-bang>)
 
 set tabline=%!MyTabLine()
+
+augroup ReloadTablineConfig
+	autocmd!
+	autocmd ColorScheme * source <sfile>
+augroup END
