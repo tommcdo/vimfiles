@@ -91,7 +91,6 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
-Plug 'romainl/flattened', { 'branch' : '6cd6f45' }
 
 " Miscellaneous plugins
 Plug 'kana/vim-submode'
