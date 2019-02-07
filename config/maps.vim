@@ -17,3 +17,14 @@ function! s:custom_gf()
 	endtry
 endfunction
 nnoremap <silent> gf :<C-U>call <SID>custom_gf()<CR>
+
+function! s:insert_shell_command(joiner)
+	let l:command = input('!', '', 'shellcmd')
+	if len(l:command) > 0
+		return join(systemlist(l:command), a:joiner)
+	else
+		return ''
+	endif
+endfunction
+inoremap <expr> <C-R>! <SID>insert_shell_command("\n")
+cnoremap <expr> <C-R>! <SID>insert_shell_command(" ")
