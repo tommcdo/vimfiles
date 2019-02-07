@@ -1,7 +1,7 @@
 """ Fugitive maps and settings
 
 " Standard maps
-nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gs :belowright 20Gstatus<CR>
 nnoremap <Leader>gd :Gvdiff<CR>
 nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>ge :Gedit<CR>
