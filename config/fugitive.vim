@@ -8,6 +8,9 @@ nnoremap <Leader>ge :Gedit<CR>
 nnoremap <Leader>gb :Gblame -w -M<CR>
 nnoremap <Leader>gg :Git log --graph --all --decorate<CR>
 
+" Force fugitive to use :! instead of :terminal (for neovom)
+let g:fugitive_force_bang_command = 1
+
 " 'Input pending' maps (start Ex command without <CR>)
 nnoremap <Leader>gt :Gtabedit! 
 
