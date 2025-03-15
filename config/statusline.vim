@@ -25,7 +25,9 @@ function! MyStatusLine()
 	let l:s .= '%='
 	let l:s .= s:hi('%{statusline#buffer_flare()} ', s:flare)
 	let l:s .= s:hi('%{statusline#kangaroo()}', s:blue)
-	let l:s .= s:eclim_problems()
+	if exists('g:enable_eclim') && g:enable_eclim
+		let l:s .= s:eclim_problems()
+	endif
 	let l:s .= s:git_branch()
 	let l:s .= s:hi('%{argc()>0?("   A[".(argc()<10?repeat("-",argidx()).(expand("%")==argv(argidx())?"+":"~").repeat("-",argc()-argidx()-1):(argidx()+1).(expand("%")==argv(argidx())?"/":"|").argc())."]"):""}', s:green)
 	let l:s .= '  '
@@ -58,7 +60,7 @@ function! statusline#modified_buffers()
 endfunction
 
 function! statusline#git_branch()
-	return exists('b:git_dir') ? fugitive#head(7) : ''
+	return exists('b:git_dir') ? fugitive#Head(7) : ''
 endfunction
 
 function! statusline#git_str(str)
