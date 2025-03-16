@@ -28,7 +28,7 @@ function! s:expose(args)
 	wincmd p
 endfunction
 command! -nargs=* GExpose silent! call s:expose(<q-args>)
-nnoremap <Le
+nnoremap <Leader>gx :GExpose -w -M<CR>
 
 " Enable automatic fold opening/closing for commit buffers
 function! s:fold_openclose_on()
