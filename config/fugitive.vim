@@ -1,14 +1,14 @@
 """ Fugitive maps and settings
 
 " Standard maps
-nnoremap <Leader>gs :belowright 20Gstatus<CR>
-nnoremap <Leader>gd :Gvdiff<CR>
-nnoremap <Leader>gl :Glog<CR>
+nnoremap <Leader>gs :belowright Git<CR>
+nnoremap <Leader>gd :Gvdiffsplit<CR>
+nnoremap <Leader>gl :Gclog<CR>
 nnoremap <Leader>ge :Gedit<CR>
-nnoremap <Leader>gb :Gblame -w -M<CR>
+nnoremap <Leader>gb :Git blame -w -M<CR>
 nnoremap <Leader>gg :Git log --graph --all --decorate<CR>
 
-" Force fugitive to use :! instead of :terminal (for neovom)
+" Force fugitive to use :! instead of :terminal (for neovim)
 let g:fugitive_force_bang_command = 1
 
 " 'Input pending' maps (start Ex command without <CR>)
@@ -22,13 +22,13 @@ augroup END
 
 " Open a :Gblame window with commit for current line highlighted
 function! s:expose(args)
-	execute 'Gblame' a:args
+	execute 'Git blame' a:args
 	normal C
 	execute 'match Search /^'.expand('<cword>').'/'
 	wincmd p
 endfunction
 command! -nargs=* GExpose silent! call s:expose(<q-args>)
-nnoremap <Leader>gx :GExpose -w -M<CR>
+nnoremap <Le
 
 " Enable automatic fold opening/closing for commit buffers
 function! s:fold_openclose_on()
